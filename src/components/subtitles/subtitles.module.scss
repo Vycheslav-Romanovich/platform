@@ -1,0 +1,139 @@
+@import 'src/styles/mixins';
+
+.displayNone {
+  display: none;
+}
+
+.wrapper {
+  position: relative;
+  flex-basis: 10%;
+  overflow: hidden;
+  background-color: rgba(19, 28, 50, 0.8);
+
+  .subtitle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .current,
+  .second {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px 30px 10px 30px;
+  }
+  .current {
+    z-index: 10;
+    padding: 10px 30px 5px 30px;
+    color: var(--White);
+  }
+
+  .second {
+    color: var(--White);
+    position: relative;
+  }
+  .currentText {
+    line-height: 25px;
+    font-size: 16px;
+  }
+
+  .secondText {
+    line-height: 21px;
+    font-size: 15px;
+  }
+
+  .hideBtn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    & div {
+      font-size: 16px;
+      color: var(--brand);
+      border-bottom: 1px solid var(--brand);
+    }
+  }
+
+  .noSubtitles {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--Black);
+    font-size: 22px;
+  }
+  .loader,
+  .hideBtn,
+  .noSubtitles {
+    background-color: var(--dark1);
+  }
+
+  .divider {
+    border-bottom: 1px solid var(--Sky);
+    max-width: 300px;
+    margin: auto;
+    height: 1px;
+  }
+}
+
+.line {
+  display: none;
+}
+
+@media screen and (min-width: 1000px) {
+  .wrapper {
+    .currentText {
+      @include Headline2M;
+    }
+
+    .secondText {
+      @include Body1D;
+    }
+
+    .hideBtn div {
+      font-size: 20px;
+    }
+  }
+}
+
+@include sm {
+  .wrapper {
+    flex-basis: 20%;
+    padding-top: 0;
+    .hideBtn div {
+      font-size: 17px;
+    }
+  }
+}
+
+@include xs {
+  .wrapper {
+    background-color: inherit;
+    .current {
+      padding: 0 20px 16px 20px;
+      color: var(--Black);
+    }
+    .second {
+      color: var(--Black);
+      padding: 16px 20px;
+    }
+  }
+  .line {
+    width: 90%;
+    height: 1px;
+    display: block;
+    background-color: var(--Sky);
+  }
+}

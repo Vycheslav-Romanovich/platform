@@ -1,0 +1,126 @@
+@import '~/styles/mixins';
+
+.studentCardWrapper {
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+  width: 100%;
+  height: 86px;
+
+  .studentBlock {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-width: 334px;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      background-color: var(--Sky);
+    }
+    50% {
+      background-color: var(--Sky);
+    }
+    75% {
+      background-color: var(--Sky);
+    }
+    100% {
+      background-color: var(--Silver);
+    }
+  }
+
+
+  & .highlight {
+    background-color: var(--Sky);
+    animation-name: fadeIn;
+    animation-duration: 1.2s;
+  }
+
+  .img {
+    max-width: 88px;
+    height: 86px;
+    border: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    background: #000;
+    flex-grow: 1;
+    
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .nameBlockWrapper {
+    @include FlexCenter;
+    gap: 18px;
+    color: var(--Black);
+
+    & .teacherTag {
+      @include Body3D;
+      color: var(--L_Grey);
+    }
+  }
+
+  .titleWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .title {
+    @include Headline4D;
+    color: var(--Black);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 238px;
+  }
+
+  .level {
+    @include Body1M;
+    color: var(--Grey);
+    margin-bottom: 20px;
+  }
+
+  .userWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .numberWords {
+    @include Body1M;
+    color: var(--Black);
+  }
+
+  .nameWrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .avatarUser {
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+
+  .nameUser {
+    @include Body1M;
+    color: var(--Grey);
+    margin-left: 8px;
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  color: var(--D_Gray);
+}
+.progressData {
+  @include FlexCenter;
+}
+
+.progressDat {
+  width: 126px;
+  @include FlexCenter;
+}

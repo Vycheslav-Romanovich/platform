@@ -1,0 +1,41 @@
+@import "../../styles/mixins.scss";
+
+.modalWrapper {
+  width: 696px;
+  height: 646px;
+  z-index: 1050;
+  padding: 48px !important;
+
+  & .innerWrapper {
+    display: flex;
+    flex-direction: column;
+
+    & .libraryTitle {
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    & .cardsWrapper {
+      overflow-y: scroll;
+      height: 430px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 12px;
+    }
+
+    & .libraryButton {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      background-color: white;
+      z-index: 10000;
+      margin-top: 16px;
+    }
+
+    & .inviteButton {
+      height: 48px;
+      width: 190px;
+    }
+  }
+}

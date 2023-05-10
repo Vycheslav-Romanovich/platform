@@ -1,0 +1,15 @@
+.main {
+  font-size: 48px;
+  position: absolute;
+  right: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .main {
+    font-size: 48px;
+    right: 0;
+    bottom: -36px;
+
+  }
+}

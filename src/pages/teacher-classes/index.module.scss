@@ -1,0 +1,50 @@
+@import '../../styles/mixins.scss';
+
+.headerWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  position: relative;
+}
+.numberOfClasses {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  color: var(--L_Grey);
+  margin: 40px 0 48px;
+  & .number {
+    min-width: fit-content;
+
+  }
+}
+
+.modalClasses {
+  max-width: 444px;
+  padding: 48px;
+}
+
+.emptyLesson {
+  display: flex;
+  flex-direction: column;
+  max-width: 458px;
+}
+.linkPublic{
+  color: var( --M_Blue);
+  text-decoration: underline;
+}
+@media (max-width: 715px) {
+  .auth {
+    gap: 8px;
+  }
+
+  .accordion {
+    display: none;
+  }
+}
+.sortingStyles {
+  position: absolute;
+  top: -75px;
+  right: -5px;
+}

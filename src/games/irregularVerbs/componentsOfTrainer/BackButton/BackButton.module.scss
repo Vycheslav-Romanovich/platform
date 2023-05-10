@@ -1,0 +1,29 @@
+@import '~/styles/mixins.scss';
+
+.primaryBtn {
+  @include ButtonLinkSmall;
+  @include sm {
+    height: 48px;
+    min-width: 126px;
+  }
+  height: 32px;
+  padding: 0;
+  text-align: center;
+  text-transform: none;
+  --border-width: 1px;
+  --border-radius: 8px;
+  --padding-start: 32px;
+  --padding-end: 32px;
+
+}
+
+.textBtn {
+  margin-left: 8px;
+  margin-right: -11px;
+
+}
+
+.left {
+  font-size: 16px;
+  margin-left: -11px;
+}

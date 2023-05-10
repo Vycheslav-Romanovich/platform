@@ -1,0 +1,14 @@
+@import '~/styles/mixins.scss';
+
+.modalClasses {
+  background-color: var(--L_Blue);
+  transform: initial;
+  @include md {
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+.wrapperClasses {
+  align-items: baseline;
+}

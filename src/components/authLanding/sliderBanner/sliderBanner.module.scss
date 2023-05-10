@@ -1,0 +1,81 @@
+@import 'src/styles/mixins.scss';
+
+.primaryBtn {
+  background: linear-gradient(154.75deg, #FFFFFF 18.01%, #69EDFF 170.92%);
+  box-shadow: 2px 6px 15px rgba(245, 247, 255, 0.3);
+  border-radius: 8px;
+  min-width: 136px;
+  padding: 2px 16px;
+  position: absolute;
+  flex-direction: column;
+  height: 50px;
+  left: 105%;
+  bottom: 15%;
+  z-index: 1;
+  color: var(--Black);
+  @include lg{
+    bottom: 12%;
+  }
+  @include md{
+    padding: 0px 12px;
+    min-width: 112px;
+    height: 42px;
+    bottom: 10%;
+  }
+  @include sm{
+    left: 109%;
+    height: 28px;
+    bottom: 12%;
+  }
+}
+
+.buttonText{
+  @include md{
+    @include HeadLine5M;
+  }
+}
+
+.accordionStyles{
+  position: absolute;
+  bottom: 15%;
+  left: 5%;
+  height: 48px;
+  width: 182px;
+  z-index: 1;
+  @include lg{
+    bottom: 10%;
+  }
+  @include md{
+    height: 32px;
+    width: 172px;
+  }
+  @include sm{
+    height: 28px;
+    width: 159px;
+    font-size: 14px;
+    line-height: 16px;
+    left: 9%;
+    bottom: 15%;
+  }
+}
+
+.trackBtn {
+  position: absolute;
+  width: 162px;
+  left: 205%;
+  bottom: 15%;
+  @include lg{
+    bottom: 12%;
+  }
+  @include md{
+    padding: 0px 12px;
+    min-width: 112px;
+    height: 42px;
+    bottom: 10%;
+  }
+  @include sm{
+    left: 209%;
+    height: 28px;
+    bottom: 12%;
+  }
+}

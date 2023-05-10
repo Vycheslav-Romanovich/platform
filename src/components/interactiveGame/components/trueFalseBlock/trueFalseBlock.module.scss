@@ -1,0 +1,80 @@
+@import 'src/styles/mixins';
+
+.questionBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 16px 0 32px;
+  width: 100%;
+  gap: 16px;
+  z-index: 1;
+}
+.blockFlow {
+  display: flex;
+  width: 100%;
+  position: relative;
+  flex-flow: row nowrap;
+  gap: 24px;
+}
+.deleteQuestionBlock {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  background: var(--L_Blue);
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 1.5px;
+    height: 30%;
+    top: 50%; 
+    left: 50%;
+    background: var(--Grey);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 1.5px;
+    height: 30%;
+    top: 50%;
+    left: 50%;
+    background: var(--Grey);
+    transform: translate(-50%, -50%) rotate(135deg);
+  }
+}
+
+.inputLabel {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 10px;
+  padding-bottom: 8px;
+}
+
+
+@include sm {
+  .questionWrapper {
+    padding: 12px 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 16px;
+    width: auto;
+    margin-bottom: 24px;
+  }
+  .addQuestionButton {
+    width: auto;
+    margin-bottom: 24px;
+  }
+  .blockFlow {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .deleteBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

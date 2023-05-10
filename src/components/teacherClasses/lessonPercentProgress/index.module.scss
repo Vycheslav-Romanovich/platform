@@ -1,0 +1,15 @@
+@import '../../../styles/mixins.scss';
+
+.box {
+  width: 60px;
+  height: 36px;
+  background-color: var(--Azure);
+  border-radius: 8px 0px;
+  @include FlexCenter;
+
+  & .resultBox {
+    @include Body1D;
+    display: flex;
+    flex-direction: row;
+  }
+}

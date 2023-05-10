@@ -1,0 +1,51 @@
+@import '~/styles/mixins.scss';
+
+.progressBarWrapper {
+  display: flex;
+  flex-direction: row;
+  margin-top: 32px;
+  gap: 18px;
+}
+
+.container {
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-top: 30px;
+}
+
+.currentQuestion {
+  @include Headline2M;
+  text-align: center;
+  color: var(--Blue);
+}
+
+.adaptiveBtn {
+  display: none;
+}
+
+.notSupported{
+  display: flex;
+  margin-top: 90px;
+}
+
+.skipBtn{
+  display: flex;
+}
+
+@include md {
+  .adaptiveBtn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+

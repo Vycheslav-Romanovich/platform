@@ -1,0 +1,96 @@
+@import '../../../styles/mixins';
+
+.openListFaqContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 52px 60px;
+  border-bottom: 3px solid var(--L_Blue);
+
+  .block1 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .titleBlock {
+    display: flex;
+    align-items: center;
+    gap: 52px;
+    @include lg {
+      max-width: 80%;
+    }
+    @include xs {
+      gap: 12px;
+      flex-wrap: wrap;
+      max-width: 80%;
+    }
+  }
+
+  .descriptionBlock {
+    visibility: hidden;
+    transition: visibility 0.3s, padding-top .3s, max-height 0.3s;
+    max-height: 0;
+    width: 100%;
+    overflow: hidden;
+    @include xs {
+    }
+  }
+
+  .descriptionBlockOpen {
+    padding-top: 32px;
+    width: 100%;
+    visibility: visible;
+    /* Set max-height to something bigger than the box could ever be */
+    max-height: 200px;
+  }
+
+  .plus {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--L_Blue);
+    transition: all 0.2s linear;
+    @include xs {
+      width: 32px;
+      height: 32px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 2px;
+      height: 14px;
+      background: var(--Black);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(90deg);
+      width: 2px;
+      height: 14px;
+      background: var(--Black);
+    }
+  }
+
+  .open {
+    background: var(--M_Blue);
+    transform: rotate(45deg);
+    transition: all 0.2s linear;
+
+    &::before {
+      background: white;
+    }
+
+    &::after {
+      background: white;
+    }
+  }
+}

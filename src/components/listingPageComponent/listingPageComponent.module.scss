@@ -1,0 +1,37 @@
+@import "src/styles/mixins";
+
+.videoItemWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 224px;
+  width: 289px;
+  cursor: pointer;
+  border-radius: 8px;
+  &:hover {
+    background-color: var(--L_Blue);
+  }
+  &:active {
+    outline: var(--D_Blue);
+  }
+  & img {
+    max-width: 100%;
+    border: 0;
+    object-fit: cover;
+    flex-basis: 67%;
+    flex-grow: 1;
+    height: 162px;
+    border-radius: 8px;
+  }
+
+  .title {
+    margin: 8px 0 6px;
+    @include Headline3M;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .tag {
+    @include Body2D;
+  }
+}

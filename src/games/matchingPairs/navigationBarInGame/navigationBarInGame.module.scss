@@ -1,0 +1,26 @@
+@import '../../../styles/mixins.scss';
+
+.arrowWrapper {
+  width: 912px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+
+  & svg {
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    color: var(--Black);
+  }
+
+  & svg:hover {
+    color: var(--Grey);
+  }
+}
+
+@include md {
+  .arrowWrapper {
+    display: none;
+  }
+}

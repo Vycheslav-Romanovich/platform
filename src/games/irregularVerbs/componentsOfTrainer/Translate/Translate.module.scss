@@ -1,0 +1,8 @@
+@import '../../../../styles/mixins.scss';
+.translate {
+  margin-top: 41px;
+  @include Headline3D;
+  text-align: center;
+  color: var(--Black);
+}
+

@@ -1,0 +1,50 @@
+@import "src/styles/mixins";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  .tip {
+    @include Headline4D;
+    color: var(--Grey)
+  }
+  .description {
+    @include Body1M;
+    color: var(--L_Grey);
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+  .mem {
+    position: relative;
+    .desktop {
+      & svg {
+        width: 748px;
+        height: 238px;
+      }
+    }
+    .mobile {
+      & svg {
+        width: 0;
+        height: 0;
+      }
+    }
+  }
+}
+
+@include md{
+  .wrapper {
+    .mem {
+      .desktop {
+        & svg {
+          display: none;
+        }
+      }
+      .mobile {
+        & svg {
+          width: 338px;
+          height: 167px;
+        }
+      }
+    }
+  }
+}

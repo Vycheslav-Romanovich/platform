@@ -1,0 +1,14 @@
+@import '../../../../styles/mixins.scss';
+.title{
+   @include Headline2D;
+    display: flex;
+    align-items: center;
+    color: var(--Black);
+}
+@media (max-width: 456px) {
+    .title {
+        width: 201px;
+        font-size: 28px;
+        line-height: 36px;
+    }
+}

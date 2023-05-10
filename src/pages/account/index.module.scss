@@ -1,0 +1,188 @@
+@import '../../styles/mixins.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttonChangePhoto {
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+.buttonChange {
+  margin-bottom: 24px;
+  margin-left: 24px;
+}
+
+.buttonSave {
+  margin-left: 24px;
+}
+
+.buttonLogOutAccount {
+  margin-top: 30px;
+}
+
+.buttonDeleteAccount {
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+
+.inputWrapperFirst {
+  width: 100%;
+  max-width: 810px;
+  display: flex;
+  position: relative;
+  margin: 24px 0 0;
+  height: 49px;
+
+  button:disabled {
+    background-color: #f3f5ff;
+  }
+}
+
+.inputWrapper {
+  width: 100%;
+  max-width: 810px;
+  display: flex;
+  position: relative;
+  margin: 24px 0 0;
+}
+
+.content {
+  width: 100%;
+  max-width: 392px;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.contentInput {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 392px;
+}
+
+.label {
+  width: 100%;
+  max-width: 184px;
+  display: flex;
+  align-items: center;
+  @include Headline4D;
+  color: var(--L_Grey);
+  margin-right: 24px;
+  height: 48px;
+}
+
+.eyeIcon {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 18px;
+  top: 16px;
+  z-index: 100;
+}
+
+.disabledPass {
+  position: relative;
+  width: 100%;
+  max-width: 392px;
+
+  .eyeIcon {
+    cursor: auto;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 18px;
+    top: 16px;
+    z-index: 100;
+    opacity: 0.6;
+  }
+}
+
+.modalClasses {
+  max-width: 500px;
+}
+
+.btnBlock {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 18px;
+  margin-top: 52px;
+}
+
+.title {
+  @include Headline2D;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.subTitle {
+  @include Body1D;
+  text-align: center;
+}
+
+@include lg {
+  .label {
+    display: none;
+  }
+  .inputWrapperFirst {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 392px;
+    margin-bottom: 0;
+    height: auto;
+  }
+  .inputWrapperSelect {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 392px;
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+  .inputWrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 392px;
+    margin-bottom: 0;
+  }
+  .inputWrapperNewPass {
+    width: 100%;
+    max-width: 880px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    margin: 24px 0 0;
+  }
+  .content {
+    margin-left: 0;
+  }
+  .buttonChange {
+    width: 100%;
+    max-width: 392px;
+    margin: 0;
+  }
+  .buttonSave {
+    width: 100%;
+    max-width: 392px;
+    margin: 0;
+    margin-top: 24px;
+  }
+  .buttonChangePhoto {
+    width: 154px;
+    height: 36px;
+    margin-top: 16px;
+  }
+}

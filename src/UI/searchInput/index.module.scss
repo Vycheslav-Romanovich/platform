@@ -1,0 +1,36 @@
+@import 'src/styles/mixins.scss';
+
+.toolbar {
+  position: relative;
+}
+.searchInput {
+  width: 60%;
+}
+
+.searchInput100{
+  width: 100%;
+}
+
+.libraryButton {
+  position: sticky; 
+  top: 0;
+  width: 100%;
+}
+
+@include sm {
+  .searchInput {
+    width: 100%;
+  }
+}
+
+.youtube {
+  color: #FC5555;
+  opacity: 0.7;
+  font-size: 40px;
+}
+
+@include md{
+  .youtube{
+    font-size: inherit;
+  }
+}

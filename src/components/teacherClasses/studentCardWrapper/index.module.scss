@@ -1,0 +1,9 @@
+@import '~/styles/mixins.scss';
+
+.cardsWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-bottom: 24px;
+}

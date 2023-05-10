@@ -1,0 +1,79 @@
+@import '../../styles/mixins.scss';
+
+@mixin huge {
+  width: 120px;
+  height: 120px;
+  padding: 6px;
+  border: 3.5px solid var(--Blue);
+  
+  @include lg {
+    width: 72px;
+    height: 72px;
+    padding: 4px;
+    border: 2px solid var(--Blue);
+  }
+}
+
+@mixin big {
+  width: 46px;
+  height: 46px;
+  padding: 4px;
+}
+
+@mixin medium {
+  width: 34px;
+  height: 34px;
+  padding: 2px;
+}
+
+@mixin small {
+  padding: 1px;
+  border: 1px solid var(--Blue);
+
+}
+
+.avatar {
+  border: 2px solid var(--Blue);
+  border-radius: 50%;
+  color: var(--Blue);
+  @include FlexCenter;
+  margin: 0;
+}
+
+.avatarIcon {
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+}
+
+.huge {
+  @include huge;
+}
+
+.big {
+  @include big;
+}
+
+.medium {
+  @include medium;
+}
+
+.small {
+  @include small;
+}
+
+.mediaHeader {
+  @include md {
+    @include medium;
+  }
+}
+
+.isPointer {
+  cursor: pointer;
+}
+
+@include xs {
+  .avatar {
+    @include medium;
+  }
+}

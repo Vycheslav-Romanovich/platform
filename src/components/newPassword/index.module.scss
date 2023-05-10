@@ -1,0 +1,14 @@
+.inputWrapper {
+  position: relative;
+  margin: 24px 0 8px;
+}
+
+.eyeIcon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 16px;
+  top: 20px;
+  z-index: 100;
+  cursor: pointer;
+}

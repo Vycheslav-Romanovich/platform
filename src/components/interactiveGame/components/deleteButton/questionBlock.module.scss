@@ -1,0 +1,37 @@
+@import '~/styles/mixins.scss';
+
+.deleteQuestionBlock {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  background: var(--L_Blue);
+  position: relative;
+  min-width: 32px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 1.5px;
+    height: 30%;
+    top: 50%;
+    left: 50%;
+    background: #535869;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }&::after {
+     content: '';
+     position: absolute;
+     width: 1.5px;
+     height: 30%;
+     top: 50%;
+     left: 50%;
+     background: var(--Grey);
+     transform: translate(-50%, -50%) rotate(135deg);
+   }
+}
+
+@include sm {
+  .deleteQuestionBlock {
+    width: 32px;
+    height: 32px;
+  }
+}

@@ -1,0 +1,37 @@
+@import 'src/styles/mixins';
+
+.wrapper {
+  display: flex;
+}
+.main {
+  width: 14px;
+  height: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--Silver);
+  border-radius: 8px;
+  margin-left: 4px;
+  cursor: pointer;
+}
+.active,
+.main:hover {
+  background-color: var(--L_Blue);
+}
+.hint {
+  width: 216px;
+  height: 56px;
+  background-color: var(--Grey);
+  padding: 8px 16px;
+  margin-left: 30px;
+  margin-top: -27px;
+  @include Body2M;
+  color: var(--White);
+  border-radius: 4px;
+  position: absolute;
+}
+.polygon {
+  position: absolute;
+  left: -10px;
+  bottom: 17px;
+}

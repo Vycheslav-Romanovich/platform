@@ -1,0 +1,19 @@
+.main {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 21px;
+  &.small {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  &.link {
+    text-decoration-line: underline;
+  }
+  &.bold {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+  }
+}

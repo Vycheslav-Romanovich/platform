@@ -1,0 +1,66 @@
+@import '~/styles/mixins.scss';
+
+.ratingButtonContainer {
+  display: flex;
+  align-items: center;
+}
+
+.tooltip {
+  @include Body3D;
+  max-width: 408px!important;
+  text-align: center;
+}
+
+.modalBodyStyle {
+  @include FlexCenter;
+  flex-direction: column;
+  max-height: 296px;
+  max-width: 408px!important;
+  position: absolute;
+  column-gap: 12px;
+  background-color: var(--Silver) !important;
+}
+
+.popupWindow {
+  @include FlexCenter;
+}
+
+.modalTitleMessage {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.modalMessage {
+  margin-bottom: 24px;
+}
+
+.btn {
+  width: 108px;
+}
+
+.modalButtonsWrapper {
+  @include FlexCenter;
+  flex-direction: column;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.rating{
+  margin-right: 24px;
+}
+
+@include md {
+  .modalBodyStyle{
+    width: 100%;
+  }
+  .popupWindow{
+    width: 100%;
+  }
+}
+
+@include sm{
+  .rating{
+    @include Body3M;
+    margin-right: 16px;
+  }
+}

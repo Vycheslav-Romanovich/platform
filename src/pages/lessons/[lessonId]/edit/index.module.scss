@@ -1,0 +1,339 @@
+@import '../../../../styles/mixins.scss';
+
+.lesson {
+  position: relative;
+  height: 100%;
+
+  .required {
+    @include Body3M;
+    margin-bottom: 16px;
+    color: var(--Grey);
+  }
+
+  h2 {
+    @include Headline2M;
+    margin-bottom: 8px;
+    color: var(--Black);
+  }
+
+  h3 {
+    @include Body2D;
+    margin: 32px 0 40px;
+    color: var(--D_Grey);
+    max-width: 500px;
+  }
+
+  .loader {
+    color: var(--White) !important;
+    width: 24px !important;
+    height: 24px !important;
+    margin-left: 8px;
+  }
+
+  .stickyElements {
+    width: 100%;
+  }
+
+  .inputContainer {
+    max-width: 392px;
+  }
+
+  .ionInput {
+    background-color: var(--Silver);
+    width: 100%;
+    border-radius: 8px;
+    text-align: start;
+    margin-bottom: 24px;
+  }
+}
+
+.breadCrumbs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+
+  svg {
+    width: 10px;
+    height: 20px;
+    margin-right: 18px;
+  }
+
+  .create {
+    @include Body0D;
+    color: var(--L_Grey);
+    margin-right: 18px;
+  }
+
+  .active {
+    @include Body0D;
+    color: var(--Blue);
+    margin-right: 18px;
+  }
+}
+
+.checkImg {
+  display: flex;
+  align-items: center;
+  margin-bottom: 42px;
+
+  .defaultCover {
+    border-radius: 8px;
+    margin-right: 27px;
+    cursor: pointer;
+
+    img {
+      width: 200px;
+      height: 92px;
+    }
+  }
+
+  .text {
+    @include Body1D;
+    color: var(--Grey);
+    margin-bottom: 8px;
+  }
+
+  .button {
+    @include Headline4D;
+    color: var(--Blue);
+    text-transform: capitalize;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+.selectWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+
+  .created {
+    @include Headline2M;
+    color: var(--Black);
+    margin-bottom: 8px;
+  }
+
+  .enter {
+    @include Body2D;
+    color: var(--Black);
+  }
+
+  @include sm {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.selectTextMobile {
+  @include sm {
+    margin-bottom: 35px;
+  }
+}
+
+.errorMb {
+  margin-bottom: 24px;
+}
+
+.createButtonTop {
+  position: absolute !important;
+  right: 0;
+  top: 0;
+}
+
+.blockButtonBottom {
+  display: flex;
+  justify-content: flex-end;
+
+  @include sm {
+    margin-top: 30px;
+  }
+}
+
+.createButtonBottom {
+  display: flex;
+  align-items: center;
+  padding: 16px 32px !important;
+  border-radius: 8px !important;
+  background-color: var(--M_Blue) !important;
+  text-transform: capitalize !important;
+  font-family: var(--default-font) !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 18px !important;
+  line-height: 24px !important;
+}
+
+.lessonCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin: 0 0 48px;
+}
+
+.addOutline {
+  height: 22px;
+  width: 22px;
+  margin-right: 10px;
+}
+
+.createCard {
+  color: var(--Grey_Blue);
+  border: 2px dashed var(--Grey_Blue);
+  border-radius: 14px;
+  min-height: 136px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  @include Headline4D;
+
+  &:hover {
+    border: 2px dashed var(--Blue);
+    color: var(--Blue);
+  }
+
+  svg {
+    margin-right: 9px;
+  }
+
+  svg path {
+    stroke: currentColor;
+  }
+
+  p {
+    @include Headline4D;
+    color: currentColor;
+  }
+}
+
+.copyButton {
+  position: absolute;
+  top: 23px;
+  right: 18px;
+  width: 200px;
+}
+
+.alertSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+
+  h4 {
+    color: #dadce5;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.editLesson {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonBox {
+  gap: 10px;
+  display: flex;
+}
+
+.stickyVideoContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  @include xs{
+      display: none;
+  }
+}
+
+.stepContainer {
+  display: none;
+  padding-bottom: 18px;
+  @include xs{
+    display: block;
+  }
+}
+
+.videoWrapper{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 24px;
+  @include sm{
+    flex-direction: column;
+  }
+}
+
+.buttonsTop {
+  position: absolute;
+  top: 35px;
+  right: 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.lessonWrapper {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 196px;
+  width: 100%;
+}
+
+@media (max-width: 960px) {
+  .lessonCard {
+    grid-template-columns: repeat(1, minmax(0, 600px));
+    max-width: 600px;
+    margin: auto;
+  }
+  .stickyContent {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 24px;
+  }
+  .createButtonTop {
+    display: none;
+  }
+  .createButtonBottom {
+    position: absolute;
+    display: block;
+    bottom: -75px;
+    right: 0;
+    width: 122px;
+    height: 56px;
+    @include ButtonLinkNormal;
+  }
+  .inputContainer {
+    max-width: 600px !important;
+  }
+  .lessonWrapper {
+    padding-bottom: 0;
+    margin-bottom: 200px;
+  }
+  .createCard {
+    min-height: 64px;
+    border-radius: 8px;
+  }
+  .lesson {
+    h2 {
+      @include Headline2D;
+      color: var(--Black);
+    }
+
+    h3 {
+      @include Body2D;
+      margin: 16px 0;
+      width: 100%;
+      color: var(--D_Grey);
+    }
+  }
+}

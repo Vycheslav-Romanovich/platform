@@ -1,0 +1,20 @@
+@import '~/styles/mixins.scss';
+
+.headerText {
+  @include Headline2D;
+  color: var(--Black);
+  margin-bottom: 40px;
+}
+
+@include md {
+  .headerText {
+    @include Headline3D;
+  }
+}
+
+.chapterName {
+  margin-bottom: 24px;
+  @include sm {
+    margin-bottom: 14px;
+  }
+}

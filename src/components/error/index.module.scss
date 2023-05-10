@@ -1,0 +1,17 @@
+@import '../../styles/mixins.scss';
+
+.errorCenter {
+  display: flex;
+  align-items: center;
+  color: var(--M_Pink);
+  margin-top: 8px;
+  @include Body3D;
+
+  @include md {
+    @include Body3M;
+  }
+
+  svg {
+    margin-right: 10px;
+  }
+}

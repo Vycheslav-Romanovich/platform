@@ -1,0 +1,11 @@
+@import '../../../styles/mixins.scss';
+
+.selectField {
+  width: 260px;
+  height: 56px;
+  border-color: var(--Grey_Blue);
+  border-radius: 8px;
+  &.warning {
+    background: var(--L_Red);
+  }
+}

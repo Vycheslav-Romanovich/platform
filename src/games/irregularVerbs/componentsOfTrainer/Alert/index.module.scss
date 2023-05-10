@@ -1,0 +1,37 @@
+@import '~/styles/mixins.scss';
+
+.container {
+  width: 100%;
+  max-width: 300px;
+  height: 180px;
+  background: var(--White);
+  box-shadow: 0px 8px 16px rgba(92, 119, 242, 0.15);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  padding: 24px 0;
+}
+.answer {
+  @include Body3D;
+  color: var(--D_Gray);
+  text-align: center;
+}
+.verbs {
+  @include Headline4M;
+  color: var(--Black);
+  text-align: center;
+  margin-top: 14px;
+}
+.btn {
+  width: 133px;
+  height: 44px;
+  margin-bottom: -1px;
+}
+.btnText {
+  @include ButtonLinkMedium;
+  color: var(--White);
+  text-transform: capitalize;
+}

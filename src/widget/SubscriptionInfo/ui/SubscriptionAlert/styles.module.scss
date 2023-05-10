@@ -1,0 +1,15 @@
+@import '~/styles/mixins.scss';
+
+.cancelSubscriptionContainer {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 408px;
+}
+
+@include md {
+  .cancelSubscriptionContainer {
+    gap: 14px;
+  }
+}

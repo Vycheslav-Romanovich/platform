@@ -1,0 +1,46 @@
+@import '../../../styles/mixins.scss';
+
+.leftBlockWrapper {
+  flex-basis: 40%;
+  width: 100%;
+  height: calc(100vh - var(--HeaderM));
+  position: relative;
+  background: url('/leftPictureLogin.svg') no-repeat;
+  background-size: cover;
+}
+
+.blockWrapper {
+  width: 100%;
+  max-width: 392px;
+  padding: 0 6px;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+  h2 {
+    @include Headline2D;
+    padding-top: 28px;
+    padding-bottom: 8px;
+    color: var(--White);
+  }
+  h3 {
+    padding-top: 32px;
+    @include Body1D;
+    text-align: initial;
+    color: var(--White);
+  }
+  h4 {
+    @include Body3D;
+    color: var(--White);
+  }
+}
+
+@include lg {
+  .leftBlockWrapper {
+    display: none;
+  }
+}

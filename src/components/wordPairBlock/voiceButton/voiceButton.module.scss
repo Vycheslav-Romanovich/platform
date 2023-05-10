@@ -1,0 +1,14 @@
+@import '../../../styles/mixins.scss';
+
+.voiceButton {
+  &.active {
+    color: var(--M_Blue);
+  }
+  &:hover{
+    color: var(--M_Blue);
+  }
+  & svg {
+    width: 24px;
+    height: 24px;
+  }
+}

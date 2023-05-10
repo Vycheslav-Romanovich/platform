@@ -1,0 +1,72 @@
+@import '../../styles/mixins';
+
+.wrapper {
+  background-color: var(--White);
+
+  .imageHome {
+    margin-bottom: 40px;
+
+    @include md {
+      margin-bottom: 30px;
+    }
+  }
+
+  .public {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+
+    @include md {
+      margin-bottom: 22px;
+    }
+
+    p {
+      @include Headline3D;
+      color: var(--Black);
+
+      @include lg {
+        @include Headline4D;
+      }
+    }
+
+    a {
+      @include Body1D;
+      display: flex;
+      align-items: center;
+      color: var(--M_Blue);
+
+      @include lg {
+        @include Body1M;
+      }
+    }
+
+    svg {
+      margin-left: 17px;
+    }
+  }
+
+  .publicPartList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 82px;
+
+    div {
+      margin-right: 24px;
+    }
+
+    div:nth-child(3) {
+      margin-right: 0;
+    }
+
+    @include md {
+      flex-direction: column;
+      margin-bottom: 46px;
+
+      div {
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import '~/styles/mixins.scss';
+
+.levelLanguage {
+  display: flex;
+  align-items: center;
+  color: var(--L_Grey);
+  @include sm {
+    @include Body3M;
+    color: var(--Black);
+  }
+}

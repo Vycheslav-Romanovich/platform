@@ -1,0 +1,41 @@
+@import 'src/styles/mixins.scss';
+
+.wrapper {
+@include FlexCenter;
+  @media (max-width: 768px) {
+    row-gap: 30px;
+  }
+}
+
+.container {
+  width: 70vw;
+  max-width: 556px;
+  height: 12px;
+  border-radius: 9px;
+  background-color: var(--Sky);
+}
+
+.progress {
+  height: 100%;
+  background-color: var(--Blue);
+  border-radius: inherit;
+  transition: width 1s ease-in-out 0s;
+}
+
+.values {
+  @include Headline4D;
+  text-align: end;
+  color: var(--Blue);
+  min-width: 70px;
+}
+
+@include md{
+  .container{
+    height: 10px;
+  }
+  .wrapper{
+    flex-direction: row-reverse;
+    gap: 20px;
+    width: 80vw;
+  }
+}

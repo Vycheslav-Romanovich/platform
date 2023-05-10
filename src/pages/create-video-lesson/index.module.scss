@@ -1,0 +1,556 @@
+@import 'src/styles/mixins';
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.customHeaderWrapper {
+  display: none;
+}
+
+.videoWrapperBox {
+  display: flex;
+  width: 100%;
+  height: 512px;
+  gap: 24px;
+}
+
+.videoItemWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 224px;
+  width: 289px;
+  cursor: pointer;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: var(--L_Blue);
+  }
+
+  &:active {
+    outline: var(--D_Blue);
+  }
+
+  & img {
+    max-width: 100%;
+    border: 0;
+    object-fit: cover;
+    flex-basis: 67%;
+    flex-grow: 1;
+    height: 162px;
+    border-radius: 8px;
+  }
+
+  .title {
+    margin: 8px 0 6px;
+    @include Headline3M;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .tag {
+    @include Body2D;
+  }
+}
+
+.tagScrollerBlock {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.wordsContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.modalWrapper {
+  width: fit-content;
+}
+
+.modalButtonBlock {
+  width: 100%;
+  display: flex;
+  margin-top: 52px;
+  justify-content: center;
+}
+
+.scrollButtonRight {
+  right: 0;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: linear-gradient(270deg, var(--White) 33.27%, rgba(255, 255, 255, 0) 99.46%);
+}
+
+.scrollButtonLeft {
+  position: absolute;
+  height: 100%;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, var(--White) 33.27%, rgba(255, 255, 255, 0) 99.46%);
+}
+
+.wrapperScrollBlock {
+  position: relative;
+}
+
+.filterContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.durationContainer {
+  color: var(--White);
+  background-color: var(--Black);
+  padding: 1px 4px;
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  border-radius: 2px;
+}
+
+.progressBarTitle {
+  @include Headline2D;
+  padding: 12px 24px;
+}
+
+.modalTitle {
+  @include FlexCenter;
+  @include Headline2D;
+}
+
+.modalDescription {
+  padding-top: 8px;
+  @include FlexCenter;
+  @include Body1D;
+}
+
+.flexLayout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.updateLessonContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px 24px;
+
+  .required {
+    @include FieldsText2;
+    color: var(--Grey);
+    padding-top: 24px;
+  }
+
+  .nameLesson {
+    @include Headline4D;
+    color: var(--Black);
+    padding-top: 12px;
+  }
+
+  .inputContainer {
+    padding-top: 8px;
+  }
+
+  .lessonLevelWrapper {
+    display: flex;
+    justify-content: space-between;
+
+    :last-child {
+      margin: 0;
+      min-width: initial;
+    }
+  }
+
+  .savedWords {
+    @include Headline4D;
+    color: var(--Black);
+  }
+
+  .checkWords {
+    padding-top: 10px;
+    @include Body1D;
+    color: var(--Black);
+  }
+}
+
+.input {
+  width: 392px;
+  padding: 16px 0;
+  border-radius: 8px;
+  text-align: start;
+  margin-bottom: 40px;
+  border-color: var(--Grey_Blue);
+
+  ::after {
+    border-bottom: 1px solid var(--Grey_Blue);
+  }
+}
+
+.mobileCardsBlock {
+  width: 59px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid var(--M_Blue);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+
+  & span {
+    @include ButtonLinkMedium;
+    color: var(--M_Blue);
+  }
+}
+
+.mobileCardsBlockWarning {
+  background: var(--L_Red);
+  border: 1px solid var(--Pink);
+}
+
+.mobileCards {
+  position: relative;
+  height: 16px;
+  width: 32px;
+  margin-left: 6px;
+}
+
+.mobileCardsWarning {
+  color: var(--Pink);
+}
+
+.button {
+  width: 100px;
+}
+
+.sortBlock {
+  display: flex;
+  gap: 16px;
+}
+
+.progressBlockVideoPage {
+  width: 100%;
+  max-width: 1200px;
+  @include xs {
+    margin: 0;
+  }
+}
+
+.progressBarWrapper {
+  padding: 26px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.progressBarDescription {
+  display: flex;
+  width: 70%;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 10px;
+  text-align: center;
+
+  .descriptionBlock {
+    @include Body0D;
+    color: var(--L_Grey);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--Grey);
+    }
+
+    &:active {
+      color: var(--Blue);
+    }
+  }
+
+  .descriptionBlockDefault {
+    @include Body0D;
+    color: var(--L_Grey);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    cursor: default;
+  }
+
+  .activeStep {
+    color: var(--Blue);
+
+    &:hover {
+      color: var(--Blue);
+    }
+  }
+}
+
+.svgArrow {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  path {
+    stroke: var(--L_Grey);
+  }
+
+  &.active {
+    path {
+      stroke: var(--Blue);
+    }
+  }
+}
+
+.tagBlock {
+  background: var(--L_Blue);
+  margin: 0 5px;
+  padding: 0 15px;
+  border-radius: 40px;
+  height: 44px;
+  color: var(--M_Blue);
+  @include ButtonLinkNormal;
+
+  &.active {
+    color: var(--White);
+    background: var(--Blue);
+  }
+}
+
+.tagLabel {
+  color: inherit !important;
+}
+
+.searchContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.viewDesktop {
+  display: contents;
+}
+
+.videoContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &::part(background) {
+    bottom: 0;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.searchWrapper {
+  width: 100%;
+}
+
+.loader {
+  color: var(--White) !important;
+  width: 24px !important;
+  height: 24px !important;
+  margin-left: 8px;
+}
+
+.buttonWrapper {
+  display: flex;
+  gap: 16px;
+}
+
+.notSubtitles {
+  display: none;
+  @include FieldsTextSmall;
+  color: var(--Pink);
+  margin-top: -20px;
+}
+
+.progressBarDescriptionMobile {
+  display: none;
+  width: 100%;
+}
+
+.nothingFound {
+  @include Headline4D;
+  color: var(--Grey);
+}
+
+.tryDiff {
+  @include Body1D;
+  color: var(--L_Grey);
+}
+
+@include xs {
+  .lessonLevelWrapper {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .updateLessonContainer {
+    padding: 0 24px 24px;
+
+    .input {
+      width: 100%;
+    }
+
+    .required {
+      @include FieldsText2;
+    }
+
+    .nameLesson {
+      @include Headline3M;
+    }
+
+    .savedWords {
+      @include Headline3M;
+    }
+  }
+
+  .customHeaderWrapper {
+    padding: 8px 22px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .wrapperScrollBlock {
+    padding: 0 12px;
+  }
+
+  .customLayout {
+    margin: 0 !important;
+  }
+
+  .descriptionBlock {
+    @include Body3M;
+  }
+
+  .progressBarTitle {
+    @include Headline2M;
+  }
+
+  .customHeader,
+  .videoPageHeader {
+    display: none;
+  }
+
+  .progressBarWrapper {
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+
+  .tagBlock {
+    height: 34px;
+    padding: 0 20px;
+    @include Body2M;
+  }
+
+  .progressBlock {
+    z-index: 11;
+    background-color: var(--White);
+  }
+}
+
+.videoPageHeader {
+  width: 100%;
+}
+
+.sortBlock {
+  width: 100%;
+}
+
+@include sm {
+  .progressBarDescription {
+    display: none;
+  }
+
+  .progressBarDescriptionMobile {
+    display: block;
+  }
+
+  .content {
+    justify-content: flex-start;
+  }
+
+  .buttonWrapper {
+    display: none;
+  }
+
+  .progressBarWrapper {
+    padding: 0;
+  }
+
+  .videoWrapperBox {
+    flex-direction: column;
+  }
+}
+
+@include md {
+  .notInfo {
+    display: none;
+  }
+
+  .notSubtitles {
+    display: inline-block;
+  }
+
+  .searchContainer {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .videoContent {
+    gap: 10px;
+  }
+
+  .filterContainer {
+    justify-content: center;
+    height: 100%;
+  }
+
+  .wordsContainer {
+    grid-template-columns: repeat(1, minmax(0, 600px));
+  }
+
+  .customHeaderWrapper {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+  padding-bottom: 120px;
+}

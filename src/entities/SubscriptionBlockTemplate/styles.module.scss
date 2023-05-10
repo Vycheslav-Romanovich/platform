@@ -1,0 +1,46 @@
+@import '~/styles/mixins.scss';
+
+.section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  .sectionTitle {
+    flex-grow: 1;
+    padding-bottom: 16px;
+  }
+  .border {
+    border-bottom: 1px solid var(--Sky);
+  }
+
+  .sectionNote {
+    border-bottom: 1px solid var(--Sky);
+    padding-bottom: 16px;
+    color: var(--L_Grey);
+    align-self: flex-end;
+  }
+  .sectionMain {
+    flex-basis: 100%;
+  }
+  .paddingMain {
+    padding: 24px 0 48px 0;
+  }
+  .paddingTable {
+    padding: 0 0 32px 0;
+  }
+}
+
+@include md {
+  .section {
+    .sectionNote {
+      border-bottom: 0;
+      padding-bottom: 24px;
+      order: 1;
+    }
+    .paddingMain {
+      padding: 16px 0;
+    }
+    .paddingTable {
+      padding: 0 0 30px 0;
+    }
+  }
+}

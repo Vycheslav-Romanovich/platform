@@ -1,0 +1,105 @@
+@import '~/styles/mixins.scss';
+
+.finishWrapper{
+  z-index: 1;
+  height: 100%;
+}
+
+.confettiWrapper{
+  width: 100%;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 200px 0 200px;
+  @include sm{
+    height: 100%;
+    justify-content: space-between;
+    padding: 24px 0 110px 0;
+  }
+}
+
+.back {
+  display: none;
+  @include sm{
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 30px;
+  }
+}
+
+.logo {
+  margin-top: 67px;
+  & svg {
+    width: 180px;
+    height: 100px;
+  }
+  @include sm{
+    margin-top: 0;
+  }
+}
+
+.block {
+  margin-top: 40px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleProgress {
+  @include Headline2M;
+  color: var(--Grey);
+  @include sm{
+    @include HeadLine5D;
+  }
+}
+
+.congratulationsTitle {
+  @include Headline2D;
+  color: var(--Black);
+  @include sm{
+    @include Headline4D;
+    margin-top: 10px;
+  }
+}
+
+.wordsLearnedWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 24px;
+}
+
+.dataOfGamesTerms {
+  @include General;
+  @include Body1M;
+  color: var(--Grey);
+  margin-bottom: 8px;
+  @include sm{
+    margin-bottom: 16px;
+  }
+}
+
+.dataOfGamesExercise {
+  @include General;
+  @include Headline4M;
+  color: var(--Blue);
+}
+
+.endingGameButtonsWrapper {
+  display: flex;
+  gap: 16px;
+  margin-top: 40px;
+  @include sm{
+    margin-top: 124px;
+    gap: 24px;
+  }
+}

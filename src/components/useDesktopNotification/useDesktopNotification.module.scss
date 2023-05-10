@@ -1,0 +1,13 @@
+@import "src/styles/mixins";
+
+.notificationUseDesktop {
+  height: 40px;
+  width: 100vw;
+  background-color: var(--M_Blue);
+  @include Body2M;
+  @include FlexCenter;
+  color: var(--Silver);
+  column-gap: 20px;
+  z-index: 999;
+  margin-bottom: -32px;
+}

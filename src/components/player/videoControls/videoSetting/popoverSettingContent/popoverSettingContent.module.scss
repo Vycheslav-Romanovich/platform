@@ -1,0 +1,37 @@
+@import "../../../../../styles/mixins";
+
+.title{
+  width: 100%;
+  padding: 12px 0;
+  color: var(--White);
+}
+
+.settingsBlock {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  flex-wrap: nowrap;
+  gap: 100px;
+  .titleContainer {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    svg {
+      width: 20px;
+      height: 16px;
+    }
+  }
+}
+
+
+
+.settingContent {
+  display: flex;
+  align-items: center;
+  color: var(--White);
+}
+

@@ -1,0 +1,54 @@
+@import '../../styles/mixins.scss';
+
+.content {
+  width: 100%;
+  max-width: 392px;
+  color: var(--Black);
+
+  .title {
+    @include Headline2D;
+    margin-bottom: 32px;
+  }
+
+  .subTitle {
+    @include Body1D;
+  }
+}
+
+.inputWrapper {
+  position: relative;
+  margin-top: 40px;
+}
+
+.sendButton {
+  @include ButtonMobileMedia;
+  width: 100%;
+  margin: 24px 0;
+  margin-top: 15px;
+}
+
+.resendBlock {
+  display: flex;
+  @include Body2D;
+
+  .getLetter {
+    margin-right: 5px;
+  }
+
+  .resend {
+    color: var(--Black);
+  }
+
+  .isSend {
+    cursor: pointer;
+    color: var(--M_Blue);
+  }
+
+  @include sm {
+    flex-direction: column;
+
+    .getLetter {
+      margin-bottom: 10px;
+    }
+  }
+}

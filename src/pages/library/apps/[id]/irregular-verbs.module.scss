@@ -1,0 +1,113 @@
+@import 'src/styles/mixins.scss';
+
+.blockTrainer {
+  margin-top: 42px;
+}
+
+.block {
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.hideConfetti {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .arrow {
+    display: none;
+  }
+  .blockTrainer {
+    margin-top: 0;
+    height: 100%;
+  }
+
+  .hideConfetti {
+    display: block;
+  }
+}
+.titleBlock {
+  display: flex;
+  flex-direction: row;
+  user-select: none;
+  @include Body1D;
+  gap: 16px;
+
+  & svg {
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    color: var(--Black);
+  }
+
+  & svg:hover {
+    color: var(--Grey);
+  }
+
+  & p {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.gameSel {
+  width: 100%;
+  min-height: 550px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--Shadow2px);
+  background: var(--Silver);
+  border-radius: 8px;
+  margin: 32px auto;
+  overflow: hidden;
+}
+
+@media (max-width: 500px) {
+  .gameSel {
+    height: 100%;
+    box-shadow: none;
+    margin: 0;
+  }
+}
+.contentWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  color: var(--Black);
+  flex-grow: 1;
+}
+
+.adaptiveHint {
+  position: relative;
+  bottom: 24px;
+
+}
+
+@media (min-width: 501px) {
+  .adaptiveHint {
+    display: none;
+  }
+}
+
+
+.hideHeaderMobile {
+  @media (max-width: 500px) {
+    display: none;
+  }
+}
+
+.backgroundAdaptiveMobile {
+  @media (max-width: 500px) {
+    background-color: var(--Silver);
+    margin: 0;
+    padding-bottom: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
+}

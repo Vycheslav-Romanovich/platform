@@ -1,0 +1,413 @@
+@import 'src/styles/mixins.scss';
+
+div .backgroundAdaptiveMobile{
+  .layout{
+    padding-top: 20px;
+  }
+}
+
+.titleBlock {
+  display: flex;
+  flex-direction: row;
+  @include Body1D;
+  gap: 16px;
+  & svg {
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    color: var(--Black);
+  }
+  & svg:hover{
+    color: var(--Grey);
+  }
+  & p {
+    display: flex;
+    align-items: center;
+    cursor: default;
+  }
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.confettiWrapper{
+  width: 100%;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.gameSelect {
+  width: 100%;
+  min-height: 550px;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--Shadow2px);
+  background: var(--Silver);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.contentWrapper {
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  color: var(--Black);
+  flex-grow: 1;
+}
+.appwordsblock {
+  margin-left: 40px;
+  display: flex;
+}
+
+.gamefield {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+  margin: 90px 20px 6px 20px;
+}
+.wordswrapper {
+  min-height: 300px;
+  min-width: 130px;
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  gap: 30px;
+  flex-direction: column;
+  justify-content: space-around;
+  background: var(--White);
+  border: 2px solid var(--Sky);
+  border-radius: 8px;
+  &_hidden {
+    visibility: hidden;
+  }
+  .word {
+    @include Body1M;
+    text-align: center;
+    color: var(--Black);
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+  .word_valid {
+    @include Body1M;
+    color: var(--Grey_Blue);
+    text-align: center;
+    text-decoration: none!important;
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.row {
+  grid-template-columns: repeat(5, 1fr);
+  display: grid;
+  grid-gap: 8px;
+  gap: 8px;
+}
+.cellwrapper {
+  width: 100%;
+  height: calc(100vw - 40px);
+  max-width: 392px;
+  max-height: 392px;
+  position: relative;
+  display: grid;
+  gap: 8px;
+  &_animate {
+    animation: field-init 400ms cubic-bezier(0.16, 0.79, 0.52, 1.31);
+  }
+}
+
+.cellsrow {
+  display: grid;
+  gap: 8px;
+}
+
+.cell {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--White);
+  border-radius: 8px;
+  @include Headline3D;
+  color: var(--Black);
+  text-transform: uppercase;
+  user-select: none;
+  box-shadow: var(--Shadow6px);
+  transition: all 500ms;
+}
+
+.cell[data-state="active"] {
+  color: var(--White)!important;
+}
+.cell[data-state="valid"] {
+  color: var(--White)!important;
+}
+.cell[data-state="number"] {
+  background-color: transparent;
+}
+
+.finishWrapper{
+  z-index: 1;
+  height: 100%;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 200px 0 200px;
+}
+
+.back {
+  display: none;
+}
+
+.logo {
+  margin-top: 67px;
+
+  & svg {
+    width: 180px;
+    height: 100px;
+  }
+}
+
+.block {
+  margin-top: 40px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleProgress {
+  @include Headline2M;
+  color: var(--Grey);
+}
+
+.congratulationsTitle {
+  @include Headline2D;
+  color: var(--Black);
+}
+
+.wordsLearnedWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 24px;
+}
+
+.dataOfGamesTerms {
+  @include General;
+  @include Body1M;
+  color: var(--Grey);
+  margin-bottom: 8px;
+}
+
+.dataOfGamesTime {
+  @include General;
+  @include Body1M;
+  color: var(--Grey);
+  margin-bottom: 8px;
+}
+
+.dataOfGamesExercise {
+  @include General;
+  @include Headline4M;
+  color: var(--Blue);
+}
+
+.endingGameButtonsWrapper {
+  display: flex;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.divHint{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 24px;
+  padding-bottom: 24px;
+  & svg {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.buttonFilled{
+  @include ButtonLinkMedium;
+  text-transform: none;
+  height: 48px;
+  min-width: 147px;
+  margin: 0;
+}
+.buttonOutlined {
+  @extend .buttonFilled;
+}
+
+.adaptiveBtn{
+  display: none;
+}
+
+@include sm {
+  div .backgroundAdaptiveMobile {
+    .layout{
+      padding: 0;
+      height: inherit;
+    }
+    background-color: var(--Silver);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .divHint{
+    padding-right: 50px;
+    padding-bottom: 0;
+  }
+  .hideHeaderMobile {
+    display: none;
+  }
+  .titleBlock{
+    display: none;
+  }
+  .contentContainer{
+    display: none;
+  }
+  .cellwrapper{
+    min-width: 258px;
+    min-height: 258px;
+    height: calc(100vw - 100px);
+    grid-gap: 2px;
+    gap: 2px;
+  }
+  .appwordsblock{
+    flex-direction: column;
+    margin: 0px 24px 32px 24px;
+    max-width: 400px;
+    width: 100%;
+    min-width: 258px;
+  }
+  .gameSelect{
+    max-height: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    border: 0;
+    margin: 0px;
+  }
+  .wrapper{
+    height: 100%;
+    margin-top: 0;
+  }
+  .contentWrapper{
+    height: 100%;
+  }
+  .gamefield{
+    flex-direction: column-reverse;
+    margin: 0;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 82%;
+  }
+  .wordswrapper{
+    @include Body2M;
+    flex-direction: row;
+    min-height:auto;
+    border: 1px solid var(--Sky);
+    gap: 5px;
+    padding: 16px;
+    flex-wrap: wrap;
+    .word{
+      @include Body2M;
+    }
+    .word_valid{
+      @include Body2M;
+    }
+  }
+  .cell{
+    @include Headline2M;
+  }
+  .cellsrow{
+    gap: 2px;
+  }
+  .row{
+    gap: 2px;
+  }
+
+  .adaptiveBtn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+
+  .main{
+    height: 100%;
+    justify-content: space-between;
+    padding: 24px 0 24px 0;
+  }
+
+  .logo{
+    margin-top: 0;
+  }
+
+  .back {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+  }
+
+  .titleProgress {
+    @include HeadLine5D;
+  }
+
+  .congratulationsTitle {
+    @include Headline4D;
+    margin-top: 10px;
+  }
+
+  .dataOfGamesTerms {
+    margin-bottom: 16px;
+  }
+
+  .dataOfGamesTime {
+    margin-bottom: 16px;
+  }
+
+  .endingGameButtonsWrapper {
+    margin-top: 124px;
+    gap: 24px;
+  }
+}
+
+@include lg {
+  .contentContainer{
+    display: none;
+  }
+}
+
+@include md{
+  .wordswrapper{
+    padding: 16px;
+    gap: 16px;
+  }
+}

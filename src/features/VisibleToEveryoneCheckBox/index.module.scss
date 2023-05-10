@@ -1,0 +1,14 @@
+@import 'src/styles/mixins.scss';
+
+.lockImg {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+
+@include md {
+  .lockImg {
+    width: 20px;
+    height: 20px;
+  }
+}

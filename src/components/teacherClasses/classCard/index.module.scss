@@ -1,0 +1,114 @@
+@import '../../../styles/mixins';
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding: 16px 20px;
+  background-color: var(--Silver);
+  box-shadow: var(--Shadow2px);
+  border-radius: 14px;
+  width: 100%;
+  height: 140px;
+  align-items: center;
+  cursor: pointer;
+
+  .imgContainer {
+    min-width: 88px;
+    height: 86px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      background-color: var(--Sky);
+    }
+    50% {
+      background-color: var(--Sky);
+    }
+    75% {
+      background-color: var(--Sky);
+    }
+    100% {
+      background-color: var(--Silver);
+    }
+  }
+  &.highlight {
+    background-color: var(--Sky);
+    animation-name: fadeIn;
+    animation-duration: 1.2s;
+  }
+
+  .img {
+    border: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    background: transparent;
+    flex-grow: 1;
+
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .nameBlockWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .titleWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .title {
+    @include Headline4D;
+    color: var(--Black);
+    word-break: break-word;
+  }
+
+  .level {
+    @include Body1M;
+    color: var(--Grey);
+    margin-bottom: 20px;
+  }
+
+  .userWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .numberWords {
+    @include Body1M;
+    color: var(--Black);
+  }
+
+  .nameWrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .avatarUser {
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+
+  .nameUser {
+    @include Body1M;
+    color: var(--Grey);
+    margin-left: 8px;
+  }
+
+
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  color: var(--D_Gray);
+}

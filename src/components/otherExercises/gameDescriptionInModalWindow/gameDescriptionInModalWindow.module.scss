@@ -1,0 +1,31 @@
+@import 'src/styles/mixins.scss';
+
+.gameIconsContainer {
+  display: flex;
+  align-items: center;
+  width: 230px;
+  height: 64px;
+  cursor: pointer;
+  padding: 4px;
+  &:hover {
+    background: var(--Sky);
+    border-radius: 6px;
+  }
+}
+.tick{
+  & svg{
+    width: 17px;
+    height: 14px;
+  }
+}
+
+.smallIconWrapper {
+  border-radius: 3px;
+  height: 100%;
+  width: auto;
+}
+.gameTitle {
+  color: var(--Black);
+  @include Headline4M;
+  margin-left: 12px;
+}

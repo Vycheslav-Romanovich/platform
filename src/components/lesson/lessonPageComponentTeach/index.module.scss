@@ -1,0 +1,12 @@
+@import '../../../styles/mixins.scss';
+
+.lessonsWrapper {
+  overflow-y: scroll;
+  height: 430px;
+}
+
+.linkPublic {
+  color: var(--M_Blue);
+  text-decoration: underline;
+  cursor: pointer;
+}

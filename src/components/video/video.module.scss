@@ -1,0 +1,146 @@
+@import '../../styles/mixins.scss';
+
+.videoWrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.playerWrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
+  position: relative;
+  width: 100%;
+  height: -moz-fit-content;
+}
+
+.text {
+  display: flex;
+  flex-direction: row;
+}
+
+.notEnoughWords {
+  margin: 24px 26px 24px 20px;
+  height: 52px;
+  @include Body3D;
+  background: var(--Silver);
+  display: flex;
+  flex-direction: row;
+  border-radius: 6px;
+}
+.infoSquare {
+  min-width: 20px;
+  min-height: 20px;
+  margin: 8px 18px 0 8px;
+}
+
+.boxContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex-basis: 21%;
+  position: sticky;
+  max-width: 276px;
+  @include lg {
+    display: none;
+  }
+  h2 {
+    @include Headline4D;
+  }
+}
+
+.boxWrapper {
+  height: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  min-width: 288px;
+
+  border: 1px solid var(--Grey_Blue);
+  border-radius: 8px;
+  .box {
+    max-height: 400px;
+    max-width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    overflow-y: auto;
+    margin-bottom: 25px;
+  }
+  .box::-webkit-scrollbar {
+    width: 20px;
+  }
+  .box::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: var(--Grey_Blue);
+    border: 8px solid transparent;
+    background-clip: content-box;
+  }
+  .box::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  .box::-webkit-scrollbar-thumb:hover {
+    background-color: var(--E_Lang);
+  }
+}
+
+.wordPairs {
+  display: flex;
+  flex-direction: row;
+  color: var(--Black);
+  margin: 8px 24px;
+  span {
+    width: 24px;
+    margin: auto 4px;
+  }
+  .wordPair {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 6px;
+    cursor: pointer;
+    h3 {
+      @include Body1D;
+      margin: 0 0 2px;
+      width: auto;
+      text-align: left;
+    }
+    h4 {
+      @include Body3D;
+      text-align: left;
+      margin: 0;
+      width: auto;
+      color: var(--L_Grey);
+    }
+  }
+}
+.trashIcon {
+  align-self: center;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  color: var(--Pink);
+}
+
+@include lg {
+  .boxWrapper {
+    display: none;
+  }
+}
+
+@include sm {
+  .boxContainer {
+    display: none;
+  }
+}
+
+.switcherWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}

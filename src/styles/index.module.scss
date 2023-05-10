@@ -1,0 +1,110 @@
+@import "mixins";
+
+.videoBlock {
+ display: flex;
+ flex-direction: column;
+ height: 100%;
+ overflow: scroll;
+ ::-webkit-scrollbar {
+  display: none;
+ }
+}
+
+.content {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ gap: 20px;
+}
+
+.videoItemWrapper {
+ display: flex;
+ flex-direction: column;
+ height: 224px;
+ width: 289px;
+ & img {
+  max-width: 100%;
+  border: 0;
+  object-fit: cover;
+  flex-basis: 67%;
+  flex-grow: 1;
+  height: 162px;
+  border-radius: 8px;
+ }
+ .title {
+  margin-top: 8px;
+  @include Headline3M;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+ }
+ .tag {
+  margin-top: 6px;
+  @include Body2D;
+ }
+}
+
+.tagScrollerBlock {
+ overflow-x: scroll;
+ overflow-y: hidden;
+ white-space: nowrap;
+ position: relative;
+ &::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
+ }
+}
+
+.scrollButtonRight {
+ right: 0;
+ width: 60px;
+ display: flex;
+ align-items: center;
+ justify-content: flex-end;
+ background:  linear-gradient(270deg, #FFFFFF 33.27%, rgba(255, 255, 255, 0) 99.46%);
+}
+
+.scrollButtonLeft {
+ position: absolute;
+ height: 100%;
+ width: 60px;
+ display: flex;
+ align-items: center;
+ background:  linear-gradient(90deg, #FFFFFF 33.27%, rgba(255, 255, 255, 0) 99.46%);
+}
+.wrapperScrollBlock {
+ position: relative;
+ margin-bottom: 65px;
+}
+.tagBlock {
+ --background: var(--L_Blue);
+ padding: 0px 32px;
+ border-radius: 40px;
+ height: 44px;
+ color: var(--M_Blue);
+ @include ButtonLinkNormal;
+ &.active {
+  color: var(--White);
+  --background: var(--Blue)
+ }
+}
+.tagLabel{
+ color: inherit !important;
+}
+.ionContent {
+ --overflow: auto;
+ --background: var(--Silver);
+ overflow: auto;
+ height: calc(100vh - 181px - var(--HeaderD));
+ @media (max-width: 715px) {
+  height: calc(100vh - 181px - var(--HeaderM));
+ }
+ &::part(background) {
+  bottom: 0;
+ }
+
+ &::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
+ }
+}

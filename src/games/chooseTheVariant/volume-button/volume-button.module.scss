@@ -1,0 +1,26 @@
+@import '../../../styles/mixins.scss';
+
+.volumeButton {
+  @include FlexCenter;
+  width: 46px;
+  height: 46px;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  & svg {
+    width: 100%;
+    height: 100%;
+    color: var(--D_Blue);
+    &:hover,
+    &:focus {
+      color: var(--Blue);
+    }
+    &.active {
+      color: var(--Blue);
+      &:hover,
+      &:focus {
+        color: var(--Blue);
+      }
+    }
+  }
+}

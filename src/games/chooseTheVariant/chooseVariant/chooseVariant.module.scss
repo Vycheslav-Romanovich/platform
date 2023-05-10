@@ -1,0 +1,32 @@
+@import '../../../styles/mixins.scss';
+
+.titleNameQuiz {
+  @include Headline3D;
+  margin-bottom: 24px;
+  max-width: 584px;
+  word-wrap: break-word;
+  word-break: break-word;
+  text-align: center;
+}
+
+.buttonsChoiceQuiz {
+  @include FlexCenter;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.volumeButton {
+  margin-bottom: 24px;
+  margin-top: 32px;
+}
+
+.largeProperties {
+  @include Headline3M;
+}
+
+@include md{
+  .titleNameQuiz {
+    max-width: 80%;
+  }
+}

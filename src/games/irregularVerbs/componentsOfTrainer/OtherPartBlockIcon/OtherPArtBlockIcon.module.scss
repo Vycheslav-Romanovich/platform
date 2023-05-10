@@ -1,0 +1,18 @@
+@import '../../../../styles/mixins.scss';
+
+.container{
+  width: 250px;
+  min-height: 72px;
+  @include FlexCenter;
+  background: var(--White);
+  box-shadow: var(--Shadow2px);
+  border-radius: 8px;
+  column-gap: 55px;
+}
+.title{
+  @include Body1D;
+}
+
+.img{
+  font-size: 38px;
+}

@@ -1,0 +1,127 @@
+@import '../../../../styles/mixins.scss';
+
+@mixin GeneralStyle {
+  @include FlexCenter;
+  border-radius: 8px;
+  @include Body1M;
+  text-align: center;
+  width: 100px;
+  height: 40px;
+}
+
+#view-message-page ion-item {
+  --inner-padding-end: 0;
+  --background: transparent;
+}
+
+#view-message-page ion-label {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+#view-message-page ion-item h2 {
+  font-weight: 600;
+}
+
+#view-message-page ion-item .date {
+  float: right;
+  align-items: center;
+  display: flex;
+}
+
+#view-message-page ion-item ion-icon {
+  font-size: 42px;
+  margin-right: 8px;
+}
+
+#view-message-page ion-item ion-note {
+  font-size: 15px;
+  margin-right: 12px;
+  font-weight: normal;
+}
+
+#view-message-page h1 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+#view-message-page p {
+  line-height: 22px;
+}
+
+.translate {
+  margin-top: 25%;
+  @include Headline3D;
+  text-align: center;
+  color: var(--Grey);
+}
+
+.blockWordList {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-bottom: 35%;
+  margin-top: 20px;
+}
+
+.rightWords {
+  border: 1px solid forestgreen;
+  box-shadow: var(--Shadow2px);
+  color: forestgreen;
+  @include GeneralStyle;
+}
+
+.wrongWords {
+  border: indianred 1px solid;
+  color: indianred;
+  @include GeneralStyle;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 51px;
+}
+
+.block {
+  display: flex;
+  flex-wrap: wrap;
+  width: 310px;
+  justify-content: center;
+  gap: 12px;
+}
+
+.wordFromList {
+  box-shadow: var(--Shadow2px);
+  width: 140px;
+  height: 48px;
+  @include FlexCenter;
+  border-radius: 8px;
+  @include Body1M;
+  text-align: center;
+  color: var(--Black);
+  background: var(--White);
+  cursor: pointer;
+}
+
+.wordChooseList {
+  visibility: hidden;
+  width: 140px;
+  height: 48px;
+}
+
+@media (max-width: 500px) {
+  .wrap {
+    margin-top: 45px;
+  }
+  .wordFromList {
+    width: 118px;
+    height: 48px;
+    @include FieldsText1;
+  }
+  .wordChooseList {
+    width: 118px;
+    height: 48px;
+  }
+}

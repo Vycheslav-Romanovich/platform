@@ -1,0 +1,242 @@
+@import '~/styles/mixins.scss';
+
+.gameField {
+  @include FlexCenter;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.wordButton {
+  height: 100%;
+  margin-bottom: 100px;
+  margin-top: 20px;
+  @include FlexCenter;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.buttonMicText{
+  @include FlexCenter;
+  flex-direction: column;
+  gap: 16px;
+  &.active{
+    display: none;
+  }
+}
+
+.micButton {
+  @include FlexCenter;
+  width: 72px;
+  height: 72px;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  transition: all var(--transition);
+  & svg {
+    width: 100%;
+    height: 100%;
+  }
+  &__line1 {
+    border-left: 4px solid var(--White);
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 24px;
+    bottom: 0;
+    height: auto;
+    width: auto;
+    animation-duration: 1s;
+    animation-name: pulseline1;
+    animation-iteration-count: infinite;
+    z-index: 1;
+  }
+  &__line2 {
+    border-left: 4px solid var(--White);
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    right: 34px;
+    bottom: 0;
+    height: auto;
+    width: auto;
+    animation-duration: 1s;
+    animation-name: pulseline2;
+    animation-iteration-count: infinite;
+    z-index: 1;
+  }
+  &__line3 {
+    border-left: 4px solid var(--White);
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 44px;
+    bottom: 0;
+    height: auto;
+    width: auto;
+    animation-duration: 1s;
+    animation-name: pulseline3;
+    animation-iteration-count: infinite;
+    z-index: 1;
+  }
+}
+
+@keyframes pulseline1 {
+  
+  from {
+    opacity: 1;
+    transform: scaleY(0.2);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(0.4);
+  }
+}
+
+@keyframes pulseline2 {
+  from {
+    opacity: 1;
+    transform: scaleY(0.1);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(0.3);
+  }
+}
+
+@keyframes pulseline3 {
+  from {
+    opacity: 1;
+    transform: scaleY(0.2);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(0.5);
+  }
+}
+
+.textClick{
+  font-weight: 400;
+  color: var(--Grey) ;
+}
+
+.emojiText{
+display: flex;
+flex-direction: column;
+gap: 12px;
+align-items: center;
+&.active{
+  display: none;
+}
+}
+
+.emoji{
+  font-size: 32px;
+  display: inline;
+}
+
+.textEmoji{
+  font-weight: 600;
+}
+
+.buttonEmoji{
+  margin-top: 28px;
+}
+
+.sentence {
+  @include FlexCenter;
+  width: 100%;
+  column-gap: 50px;
+  margin-top: 10px;
+  align-items:flex-start;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.playerContainer {
+  width: 312px;
+  height: 176px;
+  border-radius: 8px!important;
+  overflow: hidden;
+  @include FlexCenter;
+}
+
+.missingWord {
+  background: var(--Sky);
+  box-shadow: inset 0px 2px 2px 2px rgba(56, 77, 130, 0.1);
+  border-radius: 5px;
+  color: rgba(0, 0, 0, 0);
+}
+
+.word {
+ color: var(--Blue);
+}
+
+.wordWrong {
+  color: var(--Pink);
+  text-decoration: underline;
+}
+
+.wordRight {
+  color: var(--M_Green);
+  text-decoration: underline;
+}
+
+.speakSentence{
+  display: flex;
+  flex-direction: column;
+}
+
+.speak{
+  display: flex ;
+  justify-content: flex-start;
+}
+
+.sentenceGame{
+  width: 100%;
+  margin-top: 30px;
+}
+
+.textButtonTry{
+  margin-top: 10px;
+  color:var(--M_Blue);
+  cursor: pointer;
+}
+
+@include md{
+ .gameField{
+   height: auto;
+ } 
+
+.wordButton{
+  margin-top: 5px;
+  margin-bottom: 80px;
+}
+
+.sentence {
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 0;
+}
+
+.speak{
+  justify-content: center;
+}
+
+.speakSentence{
+  width: 312px;
+}
+
+.sentenceGame{
+  margin-top: 10px;
+}
+
+.emojiText{
+  gap: 2px;
+}
+.textButtonTry{
+  margin-top: 15px;
+}
+}

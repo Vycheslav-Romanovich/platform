@@ -1,0 +1,98 @@
+@import 'src/styles/mixins';
+
+.pairBlock {
+  width: 70%;
+  min-height: 70px;
+  display: flex;
+  color: var(--D_Blue);
+  box-shadow: var(--Shadow2px);
+  border-radius: 8px;
+  background-color: var(--Silver);
+  padding: 10px 16px;
+
+  .voiceButton {
+    display: flex;
+    position: relative;
+    padding-right: 20px;
+
+    &::before {
+      content: '';
+      width: auto;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      border-radius: 2px;
+      border: 1px solid var(--Sky);
+    }
+  }
+
+  .wordBlock {
+    display: flex;
+    flex: 1;
+  }
+
+  .line {
+    height: 100%;
+    border: 1px solid var(--Sky);
+  }
+
+  .word {
+    @include FlexCenter;
+    flex: 1 0 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: break-spaces;
+    padding: 20px 32px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .translate {
+    @include FlexCenter;
+    position: relative;
+    flex: 1 0 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: break-spaces;
+    padding: 20px 32px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+@include sm {
+  .pairBlock {
+    width: 100%;
+  }
+}
+
+@include xs { 
+  .wordBlock {
+    display: block !important;
+  }
+  .pairBlock {
+    height: 100%;
+    width: 100%;
+
+    .word {
+      margin: 12px 16px;
+      justify-content: flex-start;
+      padding: 0;
+      display: inline-block;
+    }
+    .line {
+      height: 2px;
+      background-color: var(--Sky);
+      display: block;
+    }
+    .translate {
+      justify-content: flex-start;
+      margin: 12px 16px;
+      padding: 0;
+      display: inline-block;
+    }
+    .voiceButton::before {
+      content: none;
+    }
+  }
+}

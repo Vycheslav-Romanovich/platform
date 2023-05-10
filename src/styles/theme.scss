@@ -1,0 +1,59 @@
+:root {
+  //Neutral
+  --Black: #131c32;
+  --D_Grey: #353d52;
+  --Black_T: #131C32CC;
+  --Grey: #535869;
+  --L_Grey: #7b839d;
+  --M_Grey: #E5E6EB;
+  --Grey_Blue: #b6c1e5;
+  --Silver: #f8faff;
+  --White: #fff;
+
+  //Primary
+  --D_Blue: #4a65df;
+  --Blue: #5c77f2;
+  --M_Blue: #6b85ff;
+  --E_Lang: #8ca0ff;
+  --Sky: #e2e7ff;
+  --L_Blue: #f3f5ff;
+
+  //Success
+  --D_Green: #045954;
+  --Green: #1b6e69;
+  --M_Green: #359a94;
+  --Azure: #35d4cb;
+  --Mint: #bef8f4;
+  --L_Green: #f1fbf8;
+
+  //Warning
+  --D_Yellow: #dcac00;
+  --Yellow: #ffcf26;
+  --M_Yellow: #ffd541;
+  --Lemon: #ffe27a;
+  --Send: #ffeca9;
+  --L_Yellow: #fff7dc;
+
+  //Danger
+  --R_Pink: rgb(229,0,0);
+  --D_Pink: #af0054;
+  --Pink: #e0076f;
+  --M_Pink: #e22c83;
+  --Raspberry: #e8599e;
+  --Barbie: #fd94c6;
+  --L_Red: #ffdeed;
+
+  //Shadows
+  --Shadow2px: 0px 2px 4px rgba(92, 119, 242, 0.4);
+  --Shadow4px: 0px 4px 8px rgba(92, 119, 242, 0.3);
+  --Shadow6px: 0px 6px 12px rgba(92, 119, 242, 0.2);
+  --Shadow8px: 0px 8px 16px rgba(92, 119, 242, 0.15);
+
+  --default-font: 'Inter', sans-serif;
+  --Rubik: 'Rubik', 'Inter', sans-serif;
+
+  --HeaderD: 64px;
+  --HeaderM: 56px;
+
+  --transition: 0.2s ease-in-out;
+}

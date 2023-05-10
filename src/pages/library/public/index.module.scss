@@ -1,0 +1,33 @@
+@import '~/styles/mixins.scss';
+
+.headerText {
+  @include Headline2D;
+  color: var(--Black);
+  margin-bottom: 40px;
+
+  @include md {
+    @include Headline3D;
+  }
+}
+.searchWrapper {
+  width: 100%;
+}
+
+.toolbar {
+  display: flex;
+  gap: 24px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+  padding-bottom: 120px;
+}
+
+@include lg {
+  .toolbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,48 @@
+@import "src/styles/mixins";
+
+.wrapper{
+    display: flex;
+}
+.main{
+    width: 68px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:var(--Silver);
+    border-radius: 8px;
+    margin-left: 32px ;
+    cursor: pointer;
+}
+.active, .main:hover {
+   background-color: var(--L_Blue);
+}
+.mainErrorLink{
+    border: 2px solid var(--R_Pink);
+}
+.mainErrorLine{
+    border: 1px solid var(--R_Pink);
+
+}
+.text{
+    @include Headline4D;
+    color: var(--E_Lang);
+    margin-right: 6px;
+}
+.hint{
+    width: 216px;
+    height: 56px;
+    background-color: var( --Grey);
+    padding: 8px 16px;
+    margin-left: 15px;
+    @include Body2M;
+    color: var( --White);
+    border-radius: 4px;
+    position: relative;
+    text-align: center;
+}
+.polygon{
+    position: absolute;
+    left: -10px;
+    bottom: 17px;
+}

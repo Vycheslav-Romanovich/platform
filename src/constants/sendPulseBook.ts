@@ -1,0 +1,4 @@
+export const SEND_PULSE_BOOK_ID = {
+  TEACHER: 539757,
+  STUDENT: 469132,
+};

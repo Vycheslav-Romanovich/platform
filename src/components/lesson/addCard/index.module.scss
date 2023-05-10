@@ -1,0 +1,40 @@
+@import 'src/styles/mixins.scss';
+
+.addOutline {
+  height: 22px;
+  width: 22px;
+  margin-right: 10px;
+}
+
+.createCard {
+  color: var(--Grey_Blue);
+  border: 2px dashed var(--Grey_Blue);
+  border-radius: 14px;
+  height: 136px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    border: 2px dashed var(--Blue);
+    color: var(--Blue);
+  }
+
+  svg path {
+    stroke: currentColor;
+  }
+}
+
+@include lg {
+  .createCard {
+    border-radius: 8px;
+  }
+}
+
+@include md {
+  .createCard {
+    min-height: 64px;
+  }
+}

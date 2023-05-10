@@ -1,0 +1,92 @@
+@import '~/styles/mixins.scss';
+
+.progressBarWrapper {
+  display: flex;
+  flex-direction: row;
+  margin-top: 32px;
+  gap: 18px;
+}
+
+.container {
+  @include FlexCenter;
+  width: 100%;
+  flex-direction: row;
+  column-gap: 40px;
+  margin-top: 30px;
+}
+
+.currentQuestion {
+  @include Headline2M;
+  text-align: center;
+  color: var(--Blue);
+}
+
+.roundsWrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 76px;
+  background: var(--Blue);
+  box-shadow: var(--Shadow2px);
+  border-radius: 8px 0;
+  @include Headline4D;
+  @include FlexCenter;
+  text-align: center;
+  color: var(--White);
+  white-space: pre-line;
+}
+
+.adaptiveBtn {
+  display: none;
+}
+
+.notSupported{
+  display: flex;
+  margin-top: 90px;
+}
+
+.gameTable {
+  @include FlexCenter;
+  flex-wrap: wrap;
+  row-gap: 16px;
+  column-gap: 36px;
+  max-width: 800px;
+  text-align: center;
+  width: 100%;
+}
+
+@include md {
+  .adaptiveBtn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+    text-align: center;
+  }
+
+  .roundsWrapper{
+    @include Headline4M;
+    width: 100%;
+    position: relative;
+    top: 0;
+    height: 40px;
+    border-radius: 4px;
+    white-space: normal;
+  }
+
+  .container {
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .gameTable {
+    row-gap: 3px;
+    column-gap: 3px;
+    height: 100%;
+  }
+}
+
+

@@ -1,0 +1,25 @@
+@import '~/styles/mixins.scss';
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 2px;
+  gap: 8px;
+
+  @include xs{
+    margin-right: 0;
+  }
+
+  .logo {
+    height: 24px;
+    width: 24px;
+    padding-left: 0;
+    cursor: pointer;
+  }
+
+  .logoText {
+    @include Rubik;
+    color: var(--M_Blue);
+  }
+}

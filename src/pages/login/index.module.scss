@@ -1,0 +1,15 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: calc(100vh - var(--HeaderD));
+    align-items: center;
+    @media (max-width: 715px) {
+        height: calc(100vh - var(--HeaderD));
+    }
+
+}
+.noMaxWidth {
+    max-width: none !important;
+}
+

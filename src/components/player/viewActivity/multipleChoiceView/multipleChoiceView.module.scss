@@ -1,0 +1,26 @@
+@import "src/styles/mixins";
+
+.multipleChooseBlock {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  margin: 20px;
+  background: var(--White);
+
+  .optionBlock {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.downButtonBlock {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.viewActivityContainer::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}

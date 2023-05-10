@@ -1,0 +1,16 @@
+@import '~/styles/mixins.scss';
+
+.transparentComp {
+  opacity: 0;
+}
+
+.container {
+  @include FlexCenter;
+  margin-top: 50px;
+}
+
+@include md {
+  .container {
+    margin-top: 0;
+  }
+}

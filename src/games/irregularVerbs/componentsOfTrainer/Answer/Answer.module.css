@@ -1,0 +1,28 @@
+
+.blockWordList {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top: 32px;
+    gap: 8px;
+}
+
+.bottomSignature{
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: var(--Grey_Blue);
+    margin-top: 8px;
+}
+@media (max-width: 500px) {
+    .blockWordList{
+        margin-top: 24px;
+        gap: 6px;
+    }
+    .bottomSignature{
+        font-size: 12px;
+    }
+}

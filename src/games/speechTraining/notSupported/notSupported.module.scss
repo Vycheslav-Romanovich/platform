@@ -1,0 +1,35 @@
+@import '~/styles/mixins.scss';
+
+.notSupportedContainer {
+  @include FlexCenter;
+  flex-direction: column;
+  text-align: center;
+  max-width: 311px;
+}
+
+.textSorry{
+  @include Headline2M;
+}
+
+.textTry{
+  @include Body1D;
+  margin-top: 16px;
+}
+
+.browserContainer{
+  display: flex;
+  flex-direction: row;
+  gap: 69px;
+  margin-top: 40px;
+}
+
+.iconWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.textIcon{
+  @include Body2M;
+}

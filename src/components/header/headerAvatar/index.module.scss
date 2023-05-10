@@ -1,0 +1,43 @@
+@import '~/styles/mixins.scss';
+
+@mixin big {
+  width: 46px;
+  height: 46px;
+  padding: 4px;
+}
+
+.blockInfo {
+  padding: 14px 0;
+}
+
+.ionFabButton {
+  @include big;
+  border: 2px solid var(--Blue);
+  border-radius: 50%;
+}
+
+.userName {
+  @include Headline4D;
+}
+
+.userEmail {
+  @include Body3D;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  color: var(--D_Gray);
+}
+
+.threeDots {
+  display: block;
+  width: 180px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+.userInfo {
+  margin-left: 8px;
+}

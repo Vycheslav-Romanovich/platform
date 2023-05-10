@@ -1,0 +1,22 @@
+@import '../../styles/mixins.scss';
+
+.button {
+  height: 56px !important;
+  width: 56px !important;
+  border-radius: 28px;
+  border-color: var(--Silver);
+  box-shadow: var(--Shadow4px);
+  background: var(--White);
+  position: fixed;
+  bottom: 52px;
+  right: 48px;
+  padding: 0;
+  @include FlexCenter;
+  cursor: pointer;
+  z-index: 100;
+
+  &:hover {
+    border-width: 2px;
+    background: var(--White);
+  }
+}

@@ -1,0 +1,101 @@
+@import "src/styles/mixins";
+
+.wrapper {
+  width: 100%;
+  max-width: 392px;
+}
+
+.iconAvatarContainer {
+  display: flex;
+  gap: 20px;
+  margin-top: 24px;
+
+  .avatarBlock {
+    width: 122px;
+    height: 170px;
+    border-radius: 8px;
+    display: flex;
+    background-color: var(--Silver);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 18px;
+    cursor: pointer;
+
+    &.active {
+      outline: 1px solid var(--Blue);
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      margin: 10px;
+    }
+  }
+}
+
+.goToAuthPage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 18px;
+
+  h6 {
+    margin: auto 8px 0 0;
+  }
+
+  a {
+    color: var(--M_Blue);
+    cursor: pointer;
+    float: right;
+  }
+}
+
+.nextButton {
+  margin-top: 24px;
+  @include ButtonLinkMedium;
+  height: 48px;
+}
+.teach{
+  margin-top: 16px;
+  max-width: 391px;
+  height: 48px;
+  border-radius: 8px;
+  background-color:var(--L_Blue);
+  padding: 12px 0 12px 24px;
+  color: var(--Blue);
+}
+.about{
+  margin-top: 24px;
+}
+.choose, .chooseRole, .native{
+  margin-top: 32px;
+}
+
+@include xs{
+  .call{
+    @include Headline1M;
+  }
+  .about{
+    margin-top: 8px;
+    @include Body3M;
+  }
+  .choose{
+    margin-top: 24px;
+    @include Headline3M;
+  }
+  .iconAvatarContainer{
+    margin-top: 10px;
+  }
+  .chooseRole{
+    margin-top: 24px;
+    @include Headline3M;
+  }
+  .native{
+    margin-top: 24px;
+    @include Headline3M;
+  }
+  .goToAuthPage{
+    margin-top: 16px;
+  }
+}

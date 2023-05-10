@@ -1,0 +1,28 @@
+@import "src/styles/mixins";
+
+.lessonPageActivityWrapper {
+  background-color: var(--Silver);
+  border-radius: 8px;
+  display: flex;
+  max-width: 808px;
+  flex-direction: column;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.option {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.closeWrapper {
+  height: 68px;
+  overflow: hidden;
+}
+
+.square {
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--Grey);
+}

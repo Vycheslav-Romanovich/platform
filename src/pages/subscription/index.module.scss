@@ -1,0 +1,38 @@
+@import '~/styles/mixins.scss';
+
+.subscriptionsContainer {
+    max-width: 795px;
+    padding-bottom: 112px;
+
+    .planInfo {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .paymentInfo {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        .paymentMethodImg {
+            height: 12px;
+        }
+    }
+
+    .cancelSubscriptionContainer {
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        max-width: 408px;
+    }
+}
+
+@include md {
+    .subscriptionsContainer {
+        .cancelSubscriptionContainer {
+            gap: 14px;
+        }
+    }
+}

@@ -1,0 +1,109 @@
+@import '../../../../styles/mixins.scss';
+
+.wrap {
+    position: relative;
+}
+
+.block {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    justify-content: center;
+}
+
+.wordFromList {
+    box-shadow:var( --Shadow2px);
+    width: 140px;
+    height: 48px;
+    @include FlexCenter;
+    border-radius: 8px;
+    @include  Body1M;
+    text-align: center;
+    color: var(--Black);
+    background: var(--White);
+}
+
+.rightWords {
+    border: 1px solid var(--M_Green);
+    box-shadow: var(--Shadow2px);
+    width: 140px;
+    height: 48px;
+   @include FlexCenter;
+    border-radius: 8px;
+   @include Body1M;
+    text-align: center;
+    color: var(--Black);
+    background: var( --White);
+}
+
+.wrongWords {
+    border: 1px solid var(--Pink);
+    box-shadow: var(--Shadow2px);
+    width: 140px;
+    height: 48px;
+   @include FlexCenter;
+    border-radius: 8px;
+    @include Body1M;
+    text-align: center;
+    color: var(--Black);
+    background: var(--White);
+}
+
+.wordChooseList {
+    visibility: hidden;
+    width: 140px;
+    height: 55px;
+    margin: 4px;
+}
+
+.readyWords {
+    border-radius: 8px;
+    min-width: 140px;
+    height: 48px;
+    @include FlexCenter;
+    background: var(--Sky);
+   @include Body1M;
+    text-align: center;
+    color: var(--Black);
+
+}
+
+@media (max-width: 500px) {
+    .blockWordList {
+        margin-top: 24px;
+        gap: 6px;
+    }
+
+    .readyWords {
+        min-width: 98px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+
+    }
+
+    .wrongWords {
+        width: 98px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .wordFromList {
+        width: 98px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .rightWords {
+        width: 98px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .viewHint {
+        display: none;
+    }
+}

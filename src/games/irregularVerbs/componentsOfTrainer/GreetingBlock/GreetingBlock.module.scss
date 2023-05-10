@@ -1,0 +1,31 @@
+@import '../../../../styles/mixins.scss';
+.block {
+    max-width: 806px;
+    height: 160px;
+    background:var( --M_Blue);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    margin-bottom: 64px;
+
+}
+
+@media (max-width: 760px) {
+    .block {
+        display: none;
+    }
+}
+
+.text {
+    @include Headline3D;
+    display: flex;
+    align-items: center;
+    color: var(--White);
+
+}
+
+.image {
+    font-size: 230px;
+    margin-top: -11px;
+}

@@ -1,0 +1,30 @@
+.spinner {
+  position: relative;
+  width: 20px;
+  height: 5px;
+}
+.spinner > div {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  background-color: var(--D_Grey);
+  border-radius: 100%;
+  display: inline-block;
+  animation: bouncedelay 0.9s infinite ease-in-out;
+  animation-fill-mode: both;
+}
+.spinner div:first-child {
+  animation-delay: -0.24s;
+  left: 0px;
+}
+.spinner div:nth-child(2) {
+  animation-delay: -0.12s;
+  left: 8px;
+}
+.spinner div:last-child {
+  left: 16px;
+}
+@keyframes bouncedelay {
+  0%, 80%, 100% {  opacity: 0.1; width: 2px; height: 2px }
+  40% {  opacity: 1;  width: 5px; height: 5px  }
+}

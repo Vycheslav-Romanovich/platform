@@ -1,0 +1,49 @@
+@import 'src/styles/mixins';
+
+.add {
+  height: 100%;
+  min-width: 141px;
+  cursor: pointer;
+  padding: 4px 8px;
+  margin-top: 10px;
+  @include sm{
+    margin-top: 4px;
+  }
+
+  &.default {
+    border-color: var(--Black);
+    &:hover {
+      border-color: var(--brand);
+    }
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+
+  &.complete {
+    background-color: var(--L_Blue);
+    color: var(--Grey_Blue);
+  }
+  &.error {
+    color: var(--pink);
+  }
+  &.loading {
+    border-color: var(--brand);
+  }
+
+  &.isIdiom {
+    &.default {
+      &:hover {
+        color: var(--aquamarine);
+        border-color: var(--aquamarine);
+      }
+    }
+    &.complete {
+      background-color: var(--aquamarine);
+    }
+    &.loading {
+      border-color: var(--aquamarine);
+    }
+  }
+}

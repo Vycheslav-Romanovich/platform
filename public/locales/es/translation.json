@@ -1,0 +1,663 @@
+{
+  "header":{
+    "createLesson": "Crear lección",
+    "placeholderFind": "Buscar lecciones",
+    "titleLogin": "Entrar",
+    "titleSignup": "Registrarse gratis",
+    "titleTest": "Ir al test 🚀",
+    "viewAll": "View all results",
+    "createClass": "Create a class"
+  },
+  "headerAvatar":{
+    "subtitle1": "¿Quiere salir?",
+    "subtitle2": "¡Vuelva pronto,",
+    "subtitle3": " le estaremos esperando!",
+    "settings": "Ajustes",
+    "policy": "Política de privacidad",
+    "feedback": "Dejar mi opinión",
+    "titleLogout": "Salir"
+  },
+  "routes":{
+    "navLinks":{
+      "Home":"Página principal",
+      "My lessons": "Mis lecciones",
+      "Library": "Biblioteca",
+      "Classes": "Clases"
+    },
+    "accordionBtn":{
+      "Use video": "Usar vídeo",
+      "Use my own words": "Usar mis propios términos"
+    },
+    "videoTab":{
+      "Words": "Término",
+      "Activity": "Ejercicio"
+    },
+    "lessonsStates":{
+      "Received": "Recibidas",
+      "Saved": "Guardadas",
+      "Created": "Creadas"
+    },
+    "libraryStates":{
+      "Public lessons": "Lecciones públicas",
+      "Mobile apps": "Mobile apps",
+      "Irregular verbs": "Irregular verbs"
+    },
+    "classesStates":{
+      "Lessons": "Lecciones",
+      "Students": "Estudiantes",
+      "Progress": "Progreso",
+      "Members": "Miembros",
+      "Created": "Created",
+      "Joined": "Joined"
+    }
+  },
+  "authLanding":{
+    "public": "Lecciones públicas",
+    "study": "Material didáctico",
+    "myLessons": "Mis lecciones",
+    "view": "Ver todo",
+    "noLessons": "No se ha encontrado ninguna lección",
+    "titleIrregular":"Verbos irregulares. Parte ",
+    "textIrregular": "20 palabras",
+    "levelIrregular": "Fácil",
+    "viewApps": "View apps"
+  },
+  "auth": {
+    "chooseLanguage": "Choose your language",
+    "loginAcc": "Entre en su cuenta",
+    "createAcc": "Crear una cuenta",
+    "loginGoogle": "Entrar con Google",
+    "signupGoogle": "Registrarse con Google",
+    "sigupEmail": "o regístrese con su E-mail",
+    "email": "E-mail",
+    "placeholderEmail": "Introduzca su E-Mail",
+    "password": "Contraseña",
+    "forgotPassword": "Olvidé mi contraseña",
+    "agree": "Estoy de acuerdo con vuestra",
+    "policy": "Política de privacidad",
+    "signup": "Registrarse",
+    "notMember": "¿Aún no es miembro?",
+    "alreadyAccount": "¿Ya tiene una cuenta?"
+  },
+  "errorValidation":{
+    "empty": "El campo no puede estar vacío",
+    "longSix": "La contraseña debe tener al menos 6 caracteres.",
+    "longSixteen": "La contraseña debe tener menos de 16 caracteres.",
+    "matchNotPassword": "Las contraseñas no coinciden",
+    "longEighty": "El nombre debe tener menos de 80 caracteres.",
+    "moreThree": "El nombre debe tener más de 2 caracteres.",
+    "lessonError": "Número mínimo de tarjetas 3",
+    "lessonCardWord": "El campo no puede estar vacío",
+    "lessonCardTranslateWord": "El campo no puede estar vacío",
+    "old": "Contraseña anterior comprobada",
+    "findAccount": "No pudimos encontrar esta cuenta.",
+    "alreadyExists": "Ya existe un usuario con ese E-mail.",
+    "emailCorrectly": "Compruebe que ha introducido correctamente su E-mail.",
+    "checkPassword": "Compruebe su contraseña",
+    "checkPrivacy": "Marque esta casilla si desea continuar",
+    "matchPassword": "La nueva contraseña debe ser diferente de la anterior"
+  },
+  "footer": {
+    "titleLibrary": "Biblioteca",
+    "titleTest": "Test de nivel de inglés",
+    "feedback": "Deje su opinión",
+    "titleProducts": "eLang Productos",
+    "extension": "eLang Extensión",
+    "app":"eLang-TV Aplicación móvil",
+    "games":"Juegos de palabras",
+    "more": "Más"
+  },
+  "video": {
+    "moreVideos": "Más vídeos"
+  },
+  "account": {
+    "changePhoto": "Cambiar la foto",
+    "name": "Nombre",
+    "labelCurName":"Su nombre actual",
+    "save": "Guardar",
+    "email": "E-mail",
+    "labelEmail": "Your e-mail",
+    "password": "Contraseña",
+    "labelOld": "Contraseña anterior",
+    "labelNew": "Contraseña nueva",
+    "change": "Cambiar",
+    "cancel": "Cancelar",
+    "nativeLang": "Lengua materna",
+    "subtitle1": "Atención: todos tus datos serán",
+    "subtitle2": "eliminados.",
+    "subtitle3": "Esta acción no se puede deshacer",
+    "delete": "Eliminar cuenta",
+    "interfaceLanguage": "Interface language"
+  },
+  "404": {
+    "title": "Oops, esa página no se encuentra...",
+    "body": "Hemos buscado por todas partes pero no hemos encontrado lo que buscabas. Vamos a encontrar un lugar mejor para que usted vaya",
+    "back": "Volver a la página principal"
+  },
+  "leftBlock":{
+    "platform":"Plataforma eLang",
+    "change": "Cambiamos la educación, queremos que la gente de distintas partes del mundo no tenga fronteras y lleve una vida feliz."
+  },
+  "newPassword":{
+    "titleTrue": "Contraseña cambiada",
+    "titleFalse": "La contraseña no se ha cambiado",
+    "subtitle1True": "Puede iniciar sesión con una nueva contraseña.",
+    "subtitle1False": "Su tiempo reparado para el cambio de contraseña.",
+    "titleLogin": "Entrar",
+    "reset": "Restablecer contraseña",
+    "enter": "Introduzca su nueva contraseña",
+    "newPassword": "Contraseña nueva",
+    "confirmNewPassword": "Confirmar contraseña nueva",
+    "confirm": "Confirmar"
+  },
+  "choiseOfPath":{
+    "teach": "I teach",
+    "learn": "I learn",
+    "lets": " Vamos a conocernos.",
+    "tell":"Cuéntenos un poco sobre usted para obtener la mejor experiencia en la Plataforma eLang",
+    "choose": "Elija su tipo de cuenta",
+    "teacher": "Profesor",
+    "student": "Estudiante",
+    "english": "Inglés",
+    "nativeLanguage": "Mi lengua materna",
+    "errorLang": "No ha elegido su lengua materna",
+    "loading": "Cargando...",
+    "signUp":"Registrarse",
+    "next": "Siguiente",
+    "already":"¿Ya tiene una cuenta?",
+    "logIn": "Entrar"
+  },
+  "createVideoLesson":{
+    "chooseVideo": "Elija el vídeo",
+    "saveTerms": "Guarde términos o añada ejercicios",
+    "nameCreate": "Nombre y cree",
+    "back": "Atrás",
+    "saving": "Guardando",
+    "save": "Guardar",
+    "next": "Siguiente",
+    "placeholderYouTube": "Busque con YouTube o pegue un enlace de YouTube",
+    "placeholderLink": "Busque o pegue un enlace",
+    "autoGenerated": "Los subtítulos autogenerados de YouTube no son compatibles.",
+    "fewerFilters": "Menos filtros",
+    "moreFilters": "Más filtros",
+    "duration": "Duración",
+    "notFound": "No se ha encontrado nada :(",
+    "tryAnother": "Intenta escribir de otra manera.",
+    "sortBy": "Sort by",
+    "editSave": "Edit and save"
+  },
+  "notLinkSearch":{
+    "tip":"Tip:",
+    "description": "Cuando busques vídeos con subtítulos en YouTube, presta atención a la etiqueta Subtítulos."
+  },
+  "step": {
+    "videos": "Vídeos",
+    "back": "Atrás",
+    "choose": "Elige un vídeo",
+    "save": "Guardar palabras",
+    "name": "Nombre y cree",
+    "create": "Crear",
+    "next": "Siguiente",
+    "step": "Paso ",
+    "of": " de ",
+    "saveTerms": "Save terms",
+    "editAndSave": "Edit and save"
+  },
+  "mobileCountWords":{
+    "save": "Guarda al menos 3 términos"
+  },
+  "containerEditWords":{
+    "enterTerms": "Introduzca los términos",
+    "editTerms": "Editar los términos",
+    "edit": "Editar",
+    "create": "Crear",
+    "creating": "Creating",
+    "saving": "Guardando",
+    "save": "Guardar",
+    "required": "* Campo obligatorio",
+    "nameLesson": "Nombra su lección*.",
+    "placeholderEnter": "Escriba el nombre de la lección",
+    "defaultCover": "Portada de la lección",
+    "change": "Cambiar",
+    "savedWords": "Palabras guardadas",
+    "createdWords": "Palabras creadas",
+    "checkTerms": "Compruebe las condiciones antes de terminar de crear la lección.",
+    "enterWord": "Introduce la palabra y su traducción en la tarjeta.",
+    "addCard": "Añadir una nueva tarjeta"
+  },
+  "lessonBlock":{
+    "labelTerm": "Término",
+    "labelDefinition": "Definición"
+  },
+  "lessonCoverModal":{
+    "defaultCover": "Portada de la lección",
+    "chooseCover": "Сoja una cubierta para la lección",
+    "done": "List"
+  },
+  "lessonSelectLevel":{
+    "chooseLevel": "Elija el nivel"
+  },
+  "lessons":{
+    "done": "Listo",
+    "descriptionDelete": "La lección fue eliminada",
+    "titleDelete": "¿Desea eliminar la lección?",
+    "subtitle1Delete": "La perderá para siempre",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "noLessons": "Aún no tiene lecciones",
+    "askTeacher": "Pide a tu profesor que te envíe el enlace a la lección.",
+    "noCreatedLessons": "Aún no ha creado lecciones",
+    "lessonsCreating": "Aquí se mostrarán las lecciones que está creando.",
+    "nothingSaved": "Aún no se ha guardado nada",
+    "seeLessons": "Aquí verá las lecciones que te ahorras de",
+    "publicLessons": "Lecciones públicas."
+  },
+  "publicCard":{
+    "assigned": "Asignada",
+    "assign": "Asignar",
+    "words": "palabras",
+    "viewProgress": "Ver el progreso",
+    "deleteClass":"Eliminar de la clase",
+    "copyLink": "Copiar enlace",
+    "edit": "Editar",
+    "startLesson": "Iniciar la lección",
+    "delete": "Eliminar"
+  },
+  "createLessonModal":{
+    "lessonCreated": "¡Lección creada!",
+    "share": "¿Quiere compartirla?",
+    "copyDescription": "Puede copiar el enlace y compartir una nueva lección con sus alumnos o amigos",
+    "copyLink": "Copiar enlace",
+    "linkCopied": "Enlace copiado",
+    "done": "Listo"
+  },
+  "lessonId":{
+    "quizDescription":{
+      "pay": "Preste atención a los términos resaltados en azul y responda a las preguntas emergentes.",
+      "watch": "Vea el vídeo y responda a las preguntas emergentes.",
+      "words": "Las palabras para memorizar se resaltarán en azul."
+    },
+    "titleAssign": "Asignar una lección a una clase",
+    "subtitle1NoClasses": "Aún no tiene clases. Cree una clase para asignar lecciones e invitar a estudiantes.",
+    "cancel": "Cancelar",
+    "createClass": "Crear una clase",
+    "titleCopy": "Copiar y editar",
+    "titleEdit": "Editar lección",
+    "titleCopyLink": "Copiar el enlace de la lección",
+    "titleDelete": "Eliminar la lección",
+    "titleSave": "Guardar la lección",
+    "titleUnsave": "Desguardar la lección",
+    "linkCopied":"Enlace copiado",
+    "assign": "Asignar",
+    "myResult": "Mi resultado total:",
+    "nameNotFound": "No se ha encontrado el nombre",
+    "wordsStudy": "Palabras para estudiar",
+    "studiedWords": "Aún no ha estudiado estos términos. Repásalas antes de entrenar",
+    "showLess": "Ver menos palabras",
+    "showAll": "Ver todos los términos",
+    "watchVideo": "Vea el vídeo",
+    "answer": " y responda a las preguntas",
+    "startQuiz": "Iniciar cuestionario en vídeo",
+    "chooseWay": "Elige la forma de aprender los términos",
+    "backLesson": "Volver a la lección",
+    "theLesson": "La lección"
+  },
+  "ratingModule":{
+    "titleMessage":"¿Cómo valoraría esta lección?",
+    "stars": "estrellas",
+    "review": "review",
+    "rateNumber": "Valora seleccionando el número de estrellas",
+    "submit": "Enviar",
+    "titleRate": "Valora esta lección",
+    "rateFirst": "Valora primero esta lección"
+  },
+  "greetingBlock":{
+    "create": "Creamos nuestras propias",
+    "lessons": "lecciones para diferentes niveles"
+  },
+  "library":{
+    "public":{
+      "placeholderSearch":"Buscar lecciones",
+      "labelLevel": "Nivel de inglés",
+      "labelCreate": "Creada por",
+      "labelNumber": "Número de términos",
+      "labelContent":"Tipo de lección"
+    },
+    "study":{
+      "titleLevel": "Nivel fácil"
+    }
+  },
+  "otherExercises":{
+    "otherExercises": "Other exercises",
+    "chooseWay": "Choose the way to learn words",
+    "back": "Back",
+    "chooseOther": "Choose other exercises for this lesson",
+    "showAll": "Show all"
+  },
+  "games":{
+    "Choose the variant": "Choose the variant",
+    "Matching pairs": "Matching pairs",
+    "Fillwords": "Fillwords",
+    "Fill in the blank": "Fill in the blank",
+    "Check pronunciation": "Check pronunciation",
+    "textChooseTheVariant": "Choose the correct translation for the word.",
+    "textMatchingPairs": "Find pairs of translation and word.",
+    "textFillwords": "Find the word and select all the letters in it from the first to the last.",
+    "textFillInTheBlank": "Put the missing term in the sentance.",
+    "textCheckPronunciation": "Repeat the term out loud to evaluate your pronunciation.",
+    "textLeave1": "Are you sure you",
+    "textLeave2": "want to leave?",
+    "yes": "Yes",
+    "no": "No",
+    "finish":{
+      "activitiesCompleted": "Activities completed:",
+      "correct": "% correct",
+      "titleProgress": "Exercise progress",
+      "great": "Great! More terms ahead!",
+      "exerciseComplete": "Exercise complete!",
+      "terms": "Terms trained:",
+      "exerciseProgress": "Exercise progress:",
+      "complete": "complete",
+      "complete100": "100% complete",
+      "startAgain": "Start again",
+      "nextExercise": "Next exercise",
+      "continue": "Continue",
+      "time": "Time:",
+      "sec": "sec"
+    },
+    "notSupported":{
+      "textSorry": "Sorry, we can't run this exercise in this browser.",
+      "textTry": "Try to use others"
+    },
+    "skipButton":{
+      "titleMessage": "Are you sure you want to skip this task?",
+      "message": "This task will be removed.",
+      "skip": "Skip",
+      "cancel": "Cancel",
+      "title": "Use it if the task is impossible"
+    },
+    "speechText":{
+      "try": "Try again",
+      "next": "Next",
+      "clickSpeak": "Click and speak",
+      "great": "Great!",
+      "awesome": "Awesome!",
+      "rock": "You rock!",
+      "fantastic": "Fantastic!",
+      "better": "You can do better",
+      "hmm": "No problem. You’re still learning",
+      "skip": "Let’s skip it for now",
+      "speak": "Speak the word"
+    }
+  },
+  "sortByDuration":{
+    "All": "All",
+    "less than 4 min": "less than 4 min",
+    "4 to 20 min": "4 to 20 min",
+    "Over 20 min": "Over 20 min"
+  },
+  "sortByOrder":{
+    "Upload date": "Upload date",
+    "Relevance": "Relevance",
+    "View count": "View count",
+    "Rating": "Rating"
+  },
+  "videoCategories":{
+    "All": "All",
+    "music": "music",
+    "food": "food",
+    "tv-series": "tv-series",
+    "games": "games",
+    "films": "films",
+    "popular science": "popular science",
+    "sport": "sport",
+    "learn english": "learn english",
+    "Cars": "Cars",
+    "travelling": "travelling",
+    "technology": "technology",
+    "TED": "TED",
+    "animation": "animation"
+  },
+  "videoCategoriesEmoji":{
+    "All": "All",
+    "music": "🎼 Music",
+    "food": "🍔 Food",
+    "tv-series": "🎬 Series",
+    "games": "🎮 Games",
+    "films": "🎥 Movies",
+    "popular science": "🔎 Popular science",
+    "sport": "⚽️ Sport",
+    "learn english": "🎓 English",
+    "Cars": "🚘 Cars",
+    "travelling": "🏜 Traveling",
+    "technology": "📡 Technologies",
+    "TED": "🔴 TED",
+    "animation": "🐣 Cartoons"
+  },
+  "switcherFromActivity":{
+    "Saved terms": "Saved terms",
+    "Activities": "Activities"
+  },
+  "textForTermsAndActivities":{
+    "saveTerms": "Save terms for automatic vocabulary exercises",
+    "customize": "Customize the exercises to your needs right in a video",
+    "notAutoSub": "Auto-generated YouTube subtitles are not supported. You can't save terms in this video"
+  },
+  "player":{
+    "chooseActivity": "Choose the activity",
+    "titleVideoExercise":"Video exercise progress",
+    "congratulationTitleVideo": "Exercise complete!",
+    "cannotCreate": "Cannot create activity here, there must be at least 3 sec between questions",
+    "addActivity": "+ Add activity at"
+  },
+  "interactiveGame":{
+    "interactiveName":{
+      "open_end_question": "Open-ended question",
+      "true_or_false": "True or False",
+      "multiple_choice": "Multiple Choice"
+    },
+    "messageMark": "Mark the correct answers by ticking them.",
+    "messageEnter": "Enter a question or delete an unnecessary one.",
+    "messageEnterStatemet": "Enter a statement or delete an unnecessary one",
+    "textTypeQuestion": "Type a question in the field.",
+    "textButtonAdd": "+ Add a new question",
+    "textTypeStatement": "Type a statement. Сhoose which one is true or false.",
+    "statements": "Statements",
+    "textButtonAddStatement": "+ Add a statement",
+    "textTypeMark": "Type a question and answers. Mark the correct answers by ticking them.",
+    "question": "Question",
+    "true": "True",
+    "false": "False",
+    "statement": "Statement",
+    "placeholderStatement": "Enter the statement here",
+    "answerQuestion": "Answer the question(s)",
+    "chooseWhether": "Choose whether the statement is true or false",
+    "chooseCorrect": "Choose the correct option(s)",
+    "continueWatching": "Continue watching",
+    "checkAnswers": "Check my answers",
+    "labelEnter": "Enter your question here",
+    "addOption":"+ Add an option",
+    "enterOption": "Enter an option here",
+    "activityAdded": "Activity added"
+  },
+  "sortLessons": {
+    "sortByOrder":{
+      "New first": "New first",
+      "Old first": "Old first",
+      "Popular first": "Popular first",
+      "A to Z": "A to Z",
+      "Z to A": "Z to A"
+    },
+    "sortByCreated":{
+      "All users": "All users",
+      "eLang experts": "eLang experts",
+      "Other teachers": "Other teachers"
+    },
+    "sortByNumberOfTerms": {
+      "All": "All",
+      "5-10": "5-10",
+      "11-20": "11-20",
+      ">20": ">20"
+    },
+    "sortByContent":{
+      "All": "All",
+      "Video": "Video",
+      "Terms": "Terms"
+    },
+    "sortByEnglishLevel":{
+      "All": "All",
+      "A1 (Beginner)": "A1 (Beginner)",
+      "A2 (Elementary)": "A2 (Elementary)",
+      "B1 (Intermediate)": "B1 (Intermediate)",
+      "B2 (Upper-Intermediate)": "B2 (Upper-Intermediate)",
+      "C1 (Advanced)": "C1 (Advanced)",
+      "С2 (Proficient)": "С2 (Proficient)"
+    }
+  },
+  "helpButton":{
+    "titleDo": "Do you have any problems? Write to us 💌",
+    "labelName": "Your name",
+    "labelEmail": "Your E-mail",
+    "placeholder1": "Describe the problem, for example:",
+    "placeholder2": "I can't create a lesson because...",
+    "succeed": "The answer to your message will be sent to your email shortly.",
+    "error": "There was a problem sending the message. Try again.",
+    "send": "Send",
+    "help": "Help"
+  },
+  "restorePassword":{
+    "title": "Forgot your password?",
+    "subTitle": "Enter your E-mail and we will send you a link to restore your password.",
+    "send": "Send",
+    "getLetter": "Didn’t get the letter with link? ",
+    "clickHere": "Click here to resend.",
+    "letterSent": "Letter sent",
+    "subtitle1": "We have sent you a letter to reset your password.",
+    "subtitle2": " Didn't get it? Сheck your spam folder or try again.",
+    "buttonText": "Thank you"
+  },
+  "useDesktopNotification": "For better experience use eLang on desktop",
+  "playerSettings": {
+    "noSubs": "No subs",
+    "speed": "Playback speed",
+    "subtitles": "Subtitles",
+    "normal": "Normal"
+  },
+  "controlPanel": {
+    "repeat": "Repeat",
+    "slowR": "Slow R",
+    "dualSub": "Dual Sub",
+    "next": "Next",
+    "prev": "Prev",
+    "toGet": "to “Get always translate”"
+  },
+  "contextMenu": {
+    "idiom": "Idiom",
+    "article": "Article",
+    "error": "Error"
+  },
+  "activityView": {
+    "hide": "Hide",
+    "showMore": "Show more..."
+  },
+  "createClass": {
+    "createClass": "Create a class",
+    "editClass": "Edit a class",
+    "cover": "Cover",
+    "upload": "Upload",
+    "title": "Title"
+  },
+  "inviteStudents": {
+    "inviteStudents": "Invite students",
+    "inviteStudentsCreate": "Class is created! Invite your students.",
+    "sendLink": "Send the invitation link to your students to add them to the class.",
+    "or": "or"
+  },
+  "videoLessonOnboard": {
+    "clickWord": "Click on a word",
+    "clickSave": "Click on a word to see its translation and press plus to save it",
+    "gotIt": "Got it"
+  },
+  "irregularVerbs": {
+    "titleBlockPart1": "Library / Irregular verbs / Irregular verbs. Part ",
+    "titleBlockPart2": " (Easy)"
+  },
+  "seo": {
+    "main": {
+      "name": "Online English Teaching Platform | eLang Platform",
+      "description": "eLang Platform for English teaching online ✓ Use pre-made exercises and create lessons with vocabulary and grammar templates ➞ word games, videos ✭ Use big video library to make and share exercises with students",
+      "keyWords": "english teaching online,english language teaching,english platforms,english language teacher,language teaching platform,language teaching,online english teaching,online platform for teaching english,online teacher of english,online teachers for english,online teaching english,teaching platform,tutor platform,teaching platform for teachers,online teaching platform,the platform english,platform teachers,platforms for teaching english,super teacher tools,teach english online,teach online english,teaching online english,teacher tools,teaching assistant"
+    },
+    "account": {
+      "name": "Account | eLang Platform",
+      "description": "Your eLang Platform Account ✭ Online Teaching Platform for language tutors",
+      "keyWords": "english language,language learning and teaching,online teaching in english,online teaching of english,teacher vibes,words learn languages,writing and language teaching"
+    },
+    "lessons": {
+      "received": {
+        "name": "Recieved lessons | Online English lessons sent by a teacher",
+        "description": "English language lessons by teachers ✭ Create lessons or ask the teacher to send you the link to the lesson",
+        "keyWords": "learning and teaching foreign languages,learning languages exercises,job vocabulary,interactive learning,intuitive dictionary,english lesson"
+      },
+      "favorite": {
+        "name": "Your favorite lessons | Save English lessons from the library",
+        "description": "Your saved lessons to teach and learn English ✭ Save English lessons from library ✓ Save your time and energy ➞ Play games with synonymes and create simple activities with wordwalls",
+        "keyWords": "exercise dictionary,exercises dictionary,build your vocabulary,dictionary teacher,dictionary for schools"
+      },
+      "created": {
+        "name": "Created lessons | Online teaching English",
+        "description": "Online English lessons you created ✭ Create new lessons to teach English ✓ Use words from videos and movies ➞ Find the meaning of words and build up English vocabulary for students",
+        "keyWords": "lesson preparation,lesson constructor,learning languages exercises,learning vocabulary in another language,learning foreign languages exercises"
+      }
+    },
+    "library": {
+      "public": {
+        "name": "Public English lessons for teaching | Use online exercises for English classes",
+        "description": "Search free public English lessons ✭ Use eLang Teaching Platform to find useful materials for language classes ✓ Thousands of exercises created by teachers and eLang experts",
+        "keyWords": "task based language learning and teaching,library,vocabulary learning foreign languages,vocabulary learning languages,vocabulary for children learning english language,english lesson,online lessons"
+      },
+      "apps": {
+        "name": "Study materials for teaching English online | English grammar word games ",
+        "description": "Search free online English grammar exercises ✭ Lessons for online Engish teaching ✓ Use online practical tasks for English teaching",
+        "keyWords": "vocabulary and grammar,vocabulary for children learning english language,vocabulary in use pre intermediate,essential grammar,grammarway,grammar in use,language practice,mygrammarlab"
+      },
+      "study": {
+        "name": "Study materials for teaching English online | English grammar word games ",
+        "description": "Search free online English grammar exercises ✭ Lessons for online Engish teaching ✓ Use online practical tasks for English teaching",
+        "keyWords": "vocabulary and grammar,vocabulary for children learning english language,vocabulary in use pre intermediate,essential grammar,grammarway,grammar in use,language practice,mygrammarlab"
+      }
+    },
+    "lessonCreation": {
+      "ownWord": {
+        "name": "Create English lesson with own words | Online English word exercise",
+        "description": "Make English word exercises online ➞ Use smart language tools ✓ Set word definitions for students ✭ Set the English level",
+        "keyWords": "wordwall community,wordwall english,wordwall matching game,wordwall templates,word wall english"
+      },
+      "createVideoLesson": {
+        "/create-video-lesson": {
+          "name": "Choose a video | Create English lesson with video",
+          "description": "Choose a video to create English lesson ➞ Select video according to topics ✓ Translate subtitles in videos",
+          "keyWords": "create online exercises,smart subtitles,special exercises video,video exercises,video exercises english"
+        },
+        "/create-video-lesson?s=1": {
+          "name": "Save terms or add activities | Create English lesson with video",
+          "description": "Create learning lessons based on popular videos ➞ Let students learn English with fun ✓ Gamify the learning process",
+          "keyWords": "create english lesson,translate subtitles,english word games, english video exercises elementary"
+        },
+        "/create-video-lesson?s=2": {
+          "name": "Check a created lesson | Create English lesson with video",
+          "description": "Check English words, phrases, and definitions you added ➞ Confirm and share a language learning lesson with students ✓ Enrich vocabulary",
+          "keyWords": "share lesson,learning mode,app for languages,app for learning languages free"
+        }
+      }
+    }
+  },
+  "apps": {
+    "chapter": {
+      "grammar": "Grammar",
+      "vocabulary": "Vocabulary",
+      "games": "Games",
+      "listening": "Listening"
+    }
+  }
+}

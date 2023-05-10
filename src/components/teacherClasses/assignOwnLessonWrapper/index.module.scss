@@ -1,0 +1,32 @@
+@import '../../../styles/mixins.scss';
+
+
+.inviteButton {
+  height: 48px;
+  width: 190px;
+}
+
+.innerWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.libraryLessons {
+  max-width: 1064px;
+  height: 734px;
+  padding: 48px !important;
+}
+
+.libraryButton {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background-color: white;
+  z-index: 10000;
+  margin-top: 16px;
+}
+
+.libraryTitle {
+  margin-bottom: 24px;
+  text-align: center;
+}

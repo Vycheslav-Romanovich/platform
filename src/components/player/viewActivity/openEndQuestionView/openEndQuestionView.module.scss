@@ -1,0 +1,23 @@
+@import "src/styles/mixins";
+
+.openEndedBlock {
+  display: flex;
+  flex-direction: column;
+
+
+  .optionBlock {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.downButtonBlock {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.viewActivityContainer::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}

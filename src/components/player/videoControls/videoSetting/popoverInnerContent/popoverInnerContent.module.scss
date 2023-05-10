@@ -1,0 +1,72 @@
+@import "src/styles/mixins";
+
+.settingIcon {
+  color: var(--White);
+  margin-right: 15px;
+}
+
+.changeSpeedWrapper {
+  position: relative;
+  & svg {
+    width: 20px;
+    cursor: pointer;
+  }
+}
+
+.settingContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.blockBack{
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px var(--Grey);
+  width: 100%;
+  gap: 18px;
+}
+
+.title{
+  color: var(--White);
+  padding: 12px 0;
+}
+
+.typography{
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  cursor: pointer;
+  width: 190px;
+  color: var(--Silver);
+  height: 36px;
+  &:hover {
+    background-color: var(--D_Grey);
+    & svg {
+      color: var(--D_Grey);
+    }
+  }
+  &:focus {
+    background-color: var(--Sky);
+    & svg {
+      color: var(--Sky);
+    }
+  }
+}
+
+.checkIconActive {
+  color: var(--Blue)!important;
+}
+
+.checkIconNotActive {
+  color: var(--D_Grey);
+}
+
+.chooseSpeedBlock {
+  padding-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}

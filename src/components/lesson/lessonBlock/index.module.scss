@@ -1,0 +1,147 @@
+@import '~/styles/mixins.scss';
+
+.lessonBlock {
+  min-height: 136px;
+  border-radius: 8px;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  border: 1px solid var(--Sky);
+  box-shadow: var(--Shadow2px);
+  padding: 22px 64px 0 64px;
+}
+
+.numberBlock {
+  @include Headline4D;
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  color: var(--L_Grey);
+}
+
+.lessonBlockNormal {
+  display: flex;
+  width: 100%;
+  @include sm {
+    width: 100%;
+  }
+}
+
+.textInput {
+  position: relative;
+  display: flex;
+  color: var(--D_Grey);
+  ::after {
+    border-bottom: 1px solid var(--Grey_Blue);
+  }
+}
+
+.translateHint {
+  @include Body2D;
+  color: var(--Black);
+  cursor: pointer;
+  background-color: var(--L_Blue);
+  padding-top: 8px;
+  padding: 8px;
+  padding-left: 16px;
+  text-align: left;
+  margin-top: 16px;
+
+  &:hover {
+    background-color: var(--Sky);
+  }
+
+  &:nth-last-child(1) {
+    margin-bottom: 44px;
+  }
+}
+
+.textInputNormal {
+  margin: 24px 100px 0 74px;
+  width: 70%;
+  @include sm {
+    margin: 0 !important;
+  }
+}
+
+.line {
+  width: 85%;
+  height: 1px;
+  background-color: var(--L_Grey);
+}
+
+.errorMb {
+  width: 280px;
+  margin-bottom: 20px;
+
+  @include sm {
+    width: auto;
+    max-width: 260px;
+  }
+}
+
+.translateHint {
+  @include Body2D;
+  color: var(--Black);
+  cursor: pointer;
+  background-color: var(--L_Blue);
+  padding-top: 8px;
+  padding-left: 16px;
+  text-align: left;
+  margin-top: 16px;
+
+  &:hover {
+    background-color: var(--Sky);
+  }
+
+  &:nth-last-child(1) {
+    margin-bottom: 44px;
+  }
+}
+
+.trashIcon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  &:hover {
+    color: var(--Pink);
+  }
+}
+
+@include md {
+  .textInput {
+    flex-direction: column;
+  }
+
+  .lessonBlock {
+    min-height: 220px;
+  }
+}
+
+@include sm {
+  .numberBlock {
+    @include Headline3M;
+    top: initial;
+    bottom: 16px;
+    left: 16px;
+  }
+
+  .lessonBlock {
+    padding: 12px 20px 40px 16px;
+    min-height: 168px;
+  }
+
+  .translateInput {
+    width: auto;
+  }
+
+  .translateHint:nth-last-child(1) {
+    margin-bottom: 0  ;
+  }
+
+  .trashIcon {
+    top: initial;
+    bottom: 8px;
+    right: 8px;
+  }
+}

@@ -1,0 +1,29 @@
+@import '../../styles/mixins.scss';
+
+.modalClasses {
+  max-width: 500px;
+}
+
+.btnBlock {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.subTitle {
+  @include Body1D;
+  text-align: center;
+  color: var(--D_Grey);
+}
+
+.button {
+  @include ButtonMobileMedia;
+  margin: 0;
+}

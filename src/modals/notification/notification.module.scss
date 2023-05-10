@@ -1,0 +1,52 @@
+@import '../../styles/mixins.scss';
+
+.modalBody {
+  width: 306px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+.innerWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--Black);
+}
+
+.buttonWrapper {
+  width: 92px;
+  height: 92px;
+  margin-bottom: 32px;
+}
+
+.text {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.description {
+  text-align: center;
+  white-space: pre-line;
+}
+
+@include sm {
+  .modalBody {
+    width: auto;
+    height: auto;
+  }
+  .buttonWrapper {
+    width: 40px;
+    height: 40px;
+  }
+  .text {
+    @include Headline2M;
+  }
+  .buttonWrapper {
+    margin-bottom: 10px;
+  }
+}

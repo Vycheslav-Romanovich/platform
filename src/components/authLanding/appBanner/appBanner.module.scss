@@ -1,0 +1,29 @@
+@import 'src/styles/mixins.scss';
+
+.wrapperApp{
+  margin-bottom: 82px;
+  position: relative;
+  @include sm{
+    margin-bottom: 46px;
+  }
+}
+
+.linkBtn {
+  position: absolute;
+  left: 6%;
+  bottom: 19%;
+  @include lg{
+    bottom: 12%;
+  }
+  @include md{
+    padding: 0px 12px;
+    min-width: 112px;
+    height: 42px;
+    bottom: 10%;
+  }
+  @include sm{
+    left: 8%;
+    height: 28px;
+    bottom: 9%;
+  }
+}

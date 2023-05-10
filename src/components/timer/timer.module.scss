@@ -1,0 +1,25 @@
+@import '~/styles/mixins';
+
+.contentWrapper {
+  @include FlexCenter;
+  flex-direction: row;
+  margin-bottom: 50px;
+}
+
+.timerContainer {
+  @include Headline2D;
+  margin-left: 20px;
+  width: 150px;
+}
+
+@include md {
+  .timerContainer {
+    @include Headline2M;
+  }
+
+  .contentWrapper {
+    margin-top: 20px;
+    margin-bottom: 16px;
+    margin-left: 90px;
+  }
+}

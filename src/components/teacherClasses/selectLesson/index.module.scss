@@ -1,0 +1,17 @@
+@import '../../../styles/mixins.scss';
+
+.selectField {
+  width: 260px;
+  height: 56px;
+  border-color: var(--Grey_Blue);
+  border-radius: 8px;
+  text-overflow: ellipsis;
+  &.warning {
+    background: var(--L_Red);
+  }
+}
+
+.clipText {
+  width: 240px;
+  text-overflow: ellipsis; 
+}

@@ -1,0 +1,350 @@
+@import 'src/styles/mixins.scss';
+
+.lesson {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  .required {
+    @include Body3M;
+    margin-bottom: 16px;
+    color: var(--Grey);
+  }
+
+  .loader {
+    color: var(--White) !important;
+    width: 24px !important;
+    height: 24px !important;
+    margin-left: 8px;
+  }
+
+  .stickyElements {
+    width: 100%;
+  }
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  width: 100%;
+  margin-bottom: 50px;
+
+  .errorNameBlock {
+    flex-basis: 100%;
+  }
+}
+
+.breadCrumbs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+
+  svg {
+    width: 10px;
+    height: 20px;
+    margin-right: 18px;
+  }
+
+  .create {
+    @include Body0D;
+    color: var(--L_Grey);
+  }
+
+  .active {
+    @include Body0D;
+    color: var(--Blue);
+    margin-right: 18px;
+  }
+  .nonActive {
+    @include Body0D;
+    color: var(--L_Grey);
+    margin-right: 18px;
+  }
+}
+.step3ActivityContainer {
+  background: var(--Silver);
+  box-shadow: 0 2px 4px rgba(92, 119, 242, 0.4);
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 746px;
+  .textBlock {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-bottom: 40px;
+    .firstElement {
+      flex-basis: 5%;
+    }
+    .secondElement {
+      flex-basis: 90%;
+    }
+    .pencil {
+      flex-basis: 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      cursor: pointer;
+    }
+  }
+}
+.addTrueFalseButton {
+  width: 100%;
+  background: var(--Sky);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.trueFalseContainer {
+  display: flex;
+  @include FlexCenter;
+  flex-direction: column;
+  padding-bottom: 24px;
+}
+
+.customStyles {
+  margin: 0;
+}
+
+.step3ActivityBox {
+  background: var(--White);
+  border-radius: 12px;
+}
+.questionButtonBlock {
+  margin-top: 12px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.checkImg {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 42px;
+
+  .defaultCoverContainer {
+    display: flex;
+    align-items: center;
+
+    .defaultCover {
+      border-radius: 8px;
+      margin-right: 27px;
+      cursor: pointer;
+
+      .imgLesson {
+        border: 0;
+        -o-object-fit: fill;
+        object-fit: fill;
+        flex-grow: 1;
+        border-radius: 7px;
+      }
+    }
+  }
+
+  .visibleToEveryoneTerms {
+    display: flex;
+    align-items: center;
+  }
+
+  .text {
+    @include Body1D;
+    color: var(--Grey);
+    margin-bottom: 8px;
+  }
+
+  .button {
+    @include Headline4D;
+    color: var(--Blue);
+    text-transform: capitalize;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+
+.selectWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+
+  .created {
+    @include Headline2M;
+    color: var(--Black);
+    margin-bottom: 8px;
+  }
+
+  .enter {
+    @include Body2D;
+    color: var(--Black);
+  }
+
+  @include sm {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.selectTextMobile {
+  @include sm {
+    margin-bottom: 35px;
+  }
+}
+
+.errorMb {
+  margin-bottom: 24px;
+}
+
+.createButtonTop {
+  position: absolute !important;
+  right: 0;
+  top: 0;
+}
+
+.blockButtonBottom {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.lessonCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin: 24px 0 48px;
+}
+
+.addOutline {
+  height: 22px;
+  width: 22px;
+  margin-right: 10px;
+}
+
+.createCard {
+  color: var(--Grey_Blue);
+  border: 2px dashed var(--Grey_Blue);
+  border-radius: 14px;
+  min-height: 136px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  @include Headline4D;
+
+  &:hover {
+    border: 2px dashed var(--Blue);
+    color: var(--Blue);
+  }
+
+  svg {
+    margin-right: 9px;
+  }
+
+  svg path {
+    stroke: currentColor;
+  }
+
+  p {
+    @include Headline4D;
+    color: currentColor;
+  }
+}
+
+.lessonWrapper {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 30px;
+  width: 100%;
+
+  .switcherActivityContainer {
+    display: flex;
+  }
+}
+
+.switcherActivity {
+  justify-content: flex-start;
+}
+
+.breadCrumbsContainer {
+    display: block;
+}
+
+.progressBarDescriptionMobile {
+    display: none;
+}
+
+@include lg {
+  .lessonCard {
+    max-width: 100%;
+  }
+  .stickyContent {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 24px;
+  }
+  .createButtonBottom {
+    position: absolute;
+    display: block;
+    bottom: -75px;
+    right: 0;
+    width: 122px;
+    height: 56px;
+    @include ButtonLinkNormal;
+  }
+
+  .createCard {
+    border-radius: 8px;
+  }
+}
+
+@include md {
+  .checkImg {
+    flex-direction: column;
+    padding-bottom: 24px;
+  }
+  .inputContainer {
+    flex-direction: column;
+  }
+  .createCard {
+    min-height: 64px;
+  }
+  .switcherActivityContainer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@include sm {
+  .lessonCard {
+    margin: 24px 0;
+  }
+
+  .blockButtonBottom {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+@include xs {
+  .required{
+    margin-top: 22px;
+  }
+
+  .breadCrumbsContainer {
+    display: none;
+  }
+
+  .progressBarDescriptionMobile {
+    display: block;
+  }
+}
+
+@include md {
+    .lesson {
+        padding-bottom: 80px;
+    }
+}

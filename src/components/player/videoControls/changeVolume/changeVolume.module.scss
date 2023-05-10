@@ -1,0 +1,34 @@
+@import "src/styles/mixins";
+
+.container {
+  margin-right: 16px;
+  & svg {
+    width: 20px;
+    cursor: pointer;
+  }
+}
+
+.volumeSliderWrapper {
+  scale: 0.9;
+  padding: 4px;
+  @include FlexCenter;
+  border-radius: 8px;
+  width: 12px;
+  height: 94px;
+}
+
+.thumb {
+  height: 16px;
+  width: 16px;
+}
+
+.tooltip {
+  background-color: var(--White);
+  box-shadow: var(--Shadow6px);
+}
+
+@include sm {
+  .container {
+    display: none;
+  }
+}

@@ -1,0 +1,347 @@
+@import 'src/styles/mixins';
+
+.backDropClasses {
+  border-radius: 20px;
+}
+
+.activityWrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.fullscreenBackdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 11;
+  background: rgba(19, 28, 50, 0.8);
+}
+
+.displayNone {
+  display: none;
+}
+
+.intGameContainer {
+  position: absolute;
+  z-index: 141;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  background: var(--Silver);
+  box-shadow: 0 8px 16px rgba(92, 119, 242, 0.15);
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  border-radius: 14px;
+  padding: 40px 80px;
+  margin-bottom: 20px;
+}
+.intGameContainerFullScreen {
+  height: 100%;
+  overflow: auto;
+}
+
+.fullScreenActivityWrapper {
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+  transform: translate(-50%, -50%);
+  z-index: 12;
+}
+
+.player {
+  position: relative;
+  display: flex;
+  height: 100%;
+  align-self: center;
+  flex: 0 1 465px;
+  flex-direction: column;
+  width: 100%;
+  min-width: 320px;
+  min-height: 320px;
+  max-height: 600px;
+  border-radius: 16px;
+}
+
+.playerInVideoPage {
+  flex-direction: column;
+  width: 100%;
+  flex-basis: 75%;
+  max-width: 912px;
+}
+
+.modalPlayer {
+  flex-basis: 100%;
+  align-self: auto;
+  height: auto;
+}
+
+.playerInEditPage {
+  flex-basis: 75%;
+  height: 512px;
+}
+
+.listWrapper {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  z-index: 100;
+}
+
+.listIcon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--White);
+  border: 1px solid var(--Sky);
+  position: relative;
+  top: 50px;
+  box-shadow: 0 6px 12px rgba(92, 119, 242, 0.3);
+  border-radius: 8px 0 0 8px;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  display: flex;
+  padding: 10px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.videoInteractiveScreen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  top: 0;
+  left: 0;
+  background: var(--Silver);
+  box-shadow: 0 2px 4px rgba(92, 119, 242, 0.4);
+  border-radius: 14px;
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+  .relativeBlock {
+    position: relative;
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+    background: var(--Silver);
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.playerWrapper {
+  height: 100%;
+}
+
+.reactPlayer {
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+  -moz-border-radius-topright: 16px;
+  -moz-border-radius-topleft: 16px;
+  overflow: hidden;
+  isolation: isolate;
+  &.block_content {
+    pointer-events: none;
+  }
+}
+
+.playerTitle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  background-color: var(--M_Blue);
+  width: 100%;
+  height: 3.3em;
+  z-index: 100;
+
+  .playerTitleText {
+    font-size: 21px;
+    color: var(--white);
+  }
+
+  .playerTitleRight {
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+    cursor: pointer;
+  }
+
+  .playerTitleLeft {
+    display: flex;
+    align-items: center;
+  }
+
+  .playerTitleBack {
+    margin-right: 16px;
+    cursor: pointer;
+  }
+
+  .playerTitleMenu {
+    margin-left: 24px;
+  }
+}
+
+.controls {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(19, 28, 50, 0.8);
+  z-index: 10;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+.descriptionBlock {
+  visibility: hidden;
+  transition: visibility 0.2s, max-width 0.2s;
+  max-width: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.descriptionBlockOpen {
+  height: 100%;
+  visibility: visible;
+  /* Set max-height to something bigger than the box could ever be */
+  max-width: 300px;
+}
+
+.addActivityButton {
+  margin: 16px 0;
+}
+
+.disableTooltip {
+  max-width: 216px;
+  background: var(--Grey);
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin: 0 !important;
+}
+
+.tooltipArrow {
+  &::before {
+    background: var(--Grey);
+  }
+}
+
+.controlsInGames {
+  @extend .controls;
+  background-color: transparent;
+  height: auto;
+  padding: 0;
+  display: none;
+}
+
+.closeFullScreenIcon {
+  position: absolute;
+  top: 34px;
+  right: 34px;
+  cursor: pointer;
+
+  &svg {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+.pause {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -70%) scale(0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.68, -1.5, 0.265, 1.55);
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -70%) scale(1);
+  }
+}
+
+.recomendedPanelWrapper {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%) scale(1);
+  opacity: 0;
+  visibility: hidden;
+  bottom: 34px;
+  transition: 1s visibility ease-in, 1s opacity ease-in;
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transition: 0s visibility, 0s opacity;
+  }
+}
+
+.subtitles {
+  position: absolute;
+  bottom: 110px;
+  width: 100%;
+}
+
+@include lg {
+  .playerInVideoPage {
+    flex-basis: 100%;
+  }
+}
+
+@include sm {
+  .subtitlesMobile {
+    display: block;
+  }
+  .controls {
+    padding: 0;
+  }
+}
+
+@include xs {
+  .recomendedPanelWrapper {
+    display: none;
+  }
+  .reactPlayer {
+    isolation: auto;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    -moz-border-radius-topright: 0;
+    -moz-border-radius-topleft: 0;
+  }
+  .controls {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: transparent;
+  }
+  .player {
+    border-radius: 0;
+  }
+
+  .playerInVideoPage {
+    flex: 0 1 465px;
+  }
+  .pause {
+    transform: translate(-50%, -160%) scale(0.1);
+    &.show {
+      transform: translate(-50%, -160%) scale(1);
+    }
+  }
+}

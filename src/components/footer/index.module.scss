@@ -1,0 +1,147 @@
+@import '../../styles/mixins';
+
+.footer {
+  width: 100vw;
+  flex: 0 0 auto;
+  background-color: var(--Silver);
+
+  .footerWrapper {
+    padding: 72px 24px;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1224px;
+    display: flex;
+    justify-content: space-between;
+    align-items: self-start;
+    margin: 0 auto;
+
+    @include lg {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @include sm {
+      padding-top: 48px;
+      padding-left: 24px;
+      padding-right: 24px;
+      flex-direction: column;
+    }
+  }
+
+  .footerLogo {
+    .logo {
+      margin-bottom: 81px;
+
+      @include sm {
+        margin-bottom: 40px;
+      }
+    }
+
+    .footerSocial {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 234px;
+
+      @include sm {
+        display: none;
+      }
+
+      li {
+        cursor: pointer;
+        position: relative;
+        width: 34px;
+        height: 34px;
+        background: var(--White);
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06), 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      svg {
+        position: absolute;
+        top: 7px;
+        right: 7px;
+        width: 21px;
+        height: 19px;
+      }
+    }
+  }
+
+  .footerLink {
+    display: flex;
+    margin-bottom: 0;
+    gap: 200px;
+
+    @include lg {
+      gap: 100px;
+    }
+
+    @include sm {
+      margin-bottom: 56px;
+    }
+
+    .title {
+      @include Headline4D;
+      margin-bottom: 22px;
+      color: var(--Black);
+
+      @include sm {
+        @include Headline4M;
+        margin-bottom: 32px;
+      }
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+  }
+
+  .footerSocialNone {
+    display: none;
+
+    @include sm {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 314px;
+
+      li {
+        cursor: pointer;
+        position: relative;
+        width: 34px;
+        height: 34px;
+        background: var(--White);
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06), 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      svg {
+        position: absolute;
+        top: 7px;
+        right: 7px;
+        width: 21px;
+        height: 19px;
+      }
+    }
+  }
+}
+
+.text {
+  @include Body1M;
+  width: 439px;
+  margin-bottom: 70px;
+  color: var(--Black);
+
+  @include md {
+    @include Body1M;
+    width: 439px;
+    margin-bottom: 40px;
+  }
+
+  @include sm {
+    @include Body2M;
+    margin-bottom: 30px;
+    width: 280px;
+  }
+}

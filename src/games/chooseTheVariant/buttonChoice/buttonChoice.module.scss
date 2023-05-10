@@ -1,0 +1,74 @@
+@import '../../../styles/mixins.scss';
+
+.buttonsChoiceQuiz {
+  @include FlexCenter;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.buttonChoiceQuiz {
+  padding: 16px;
+  word-wrap: break-word;
+  word-break: break-word;
+  @include PrimaryBtn;
+  @include Body1D;
+  color: var(--Black)!important;
+  border: none!important;
+  width: 288px;
+  height: 50px;
+  text-align: center;
+  text-transform: lowercase;
+  background: var(--White);
+  box-shadow: var(--Shadow6px);
+  --border-width: 0px;
+  border-radius: 8px;
+  --ion-color-base: var(--Black);
+  &:hover {
+    border: 1px solid #6b85ff;
+    box-shadow: var(--Shadow6px);
+  }
+  &:active {
+    box-shadow: var(--Shadow2px);
+  }
+}
+
+.mediumProperties {
+  height: 76px;
+}
+
+.largeProperties {
+  width: 460px;
+  height: 76px;
+}
+
+.buttonChoiceWrong {
+  box-shadow: var(--Shadow2px)!important;
+  border: 1px solid var(--Pink)!important;
+  background: var(--L_Red)!important;
+}
+
+.buttonChoiceRight {
+  background: var(--Mint)!important;
+  border: 1px solid var(--M_Green)!important;
+  border-radius: 8px!important;
+}
+
+.buttonChoiceHidden {
+  visibility: hidden;
+}
+
+@include md {
+  .largeProperties {
+    width: 312px;
+    height: 100px;
+  }
+
+  .buttonChoiceQuiz {
+    &:hover {
+      background: var(--White);
+    }
+    &:active {
+      box-shadow: var(--Shadow6px);
+    }
+  }
+}

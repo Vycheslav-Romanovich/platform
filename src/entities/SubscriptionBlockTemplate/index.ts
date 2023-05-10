@@ -1,0 +1,1 @@
+export { SubscriptionBlockTemplate } from './ui';

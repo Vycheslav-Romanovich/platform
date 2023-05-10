@@ -1,0 +1,57 @@
+@import '~/styles/mixins.scss';
+
+.dropdown {
+  width: 100%;
+  position: absolute;
+  top: 1px;
+}
+.dropdownMobile {
+  @extend .dropdown;
+  width: 100%;
+  box-shadow: none;
+  left: 0;
+}
+.dialogWrapper {
+  display: flex;
+  align-items: center;
+  padding: 10px 24px;
+}
+.dialogInput {
+  width: 100%;
+  margin-left: 20px;
+}
+
+.viewAllResults {
+  height: 44px;
+  border-top: 1px solid var(--L_Blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.box {
+  display: none;
+
+  @include sm {
+    border: 1px solid #b6c1e6;
+    border-radius: 8px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+  }
+  & button {
+    padding: 8px;
+  }
+}
+
+.inputField {
+  display: block;
+
+  @include sm {
+    display: none;
+  }
+}
+
+.button {
+  pointer-events: none;
+}

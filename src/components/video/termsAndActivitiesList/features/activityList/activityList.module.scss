@@ -1,0 +1,11 @@
+@import '~/styles/mixins.scss';
+
+.wordPairs {
+  display: flex;
+  flex-direction: row;
+  padding: 0 16px;
+}
+.activeActivity {
+  border-left: 2px solid var(--Blue);
+  background-color: var(--L_Blue);
+}

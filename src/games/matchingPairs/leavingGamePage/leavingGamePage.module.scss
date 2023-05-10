@@ -1,0 +1,24 @@
+@import '../../../styles/mixins.scss';
+
+.leavingScreen {
+  @include FlexCenter;
+  @include Headline2D;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.buttonsBlock {
+  @include FlexCenter;
+  flex-direction: row;
+  margin-top: 63px;
+  width: 90%;
+  column-gap: 25px;
+}
+
+@include md {
+  .leavingScreen {
+    height: 100vh;
+  }
+}

@@ -1,0 +1,64 @@
+@import '~/styles/mixins.scss';
+
+.skipButtonContainer {
+  @include FlexCenter;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.tooltip {
+  @include Body3D;
+  max-width: 140px!important;
+  text-align: center;
+}
+
+.modalBodyStyle {
+  @include FlexCenter;
+  flex-direction: column;
+  height: 291px;
+  width: 506px;
+  position: absolute;
+  column-gap: 12px;
+  background-color: var(--Silver) !important;
+}
+
+.popupWindow {
+  @include FlexCenter;
+}
+
+.modalTitleMessage {
+  @include Headline4D;
+  width: 282px;
+  text-align: center;
+  margin-bottom: 12px;
+
+}
+
+.modalMessage {
+  @include Body2D;
+  margin-bottom: 40px;
+}
+
+.Btn {
+  width: 108px;
+}
+
+.modalButtonsWrapper {
+  @include FlexCenter;
+  flex-direction: row;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+@include md {
+  .skipButtonContainer {
+    justify-content:flex-start;
+    margin-bottom: 12px;
+  }
+  .modalBodyStyle{
+    width: 100%;
+  }
+  .popupWindow{
+    width: 100%;
+  }
+}

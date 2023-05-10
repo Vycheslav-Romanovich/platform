@@ -1,0 +1,290 @@
+@import "../../styles/mixins.scss";
+
+.teacherWithStudents {
+  width: 124px;
+  height: 108px;
+}
+
+.updateField {
+  @include FlexCenter;
+  justify-content: space-between;
+
+  .uploadCoverContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 16px;
+
+    .lockImg {
+      display: flex;
+      margin-right: 8px;
+    }
+  }
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  overflow: hidden;
+
+  .img {
+    border: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    background: transparent;
+    flex-grow: 1;
+
+    cursor: pointer;
+  }
+}
+
+.innerWrapper {
+  width: 444px;
+  height: 462px;
+  position: relative;
+  z-index: 1100;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--White);
+
+  .closeClass {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1100;
+    top: 16px;
+    right: 16px;
+  }
+
+  h2 {
+    @include Headline4D;
+    color: var(--Black);
+  }
+}
+.modalDescription {
+  display: none;
+}
+.copyLink {
+  position: relative;
+  margin: 40px 0 32px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+}
+
+.cover {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.modalButton {
+  position: absolute;
+  top: -52px;
+  right: 20px;
+  width: 200px;
+  height: 44px;
+  font-size: 14px;
+
+  &::after {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    pointer-events: none;
+    z-index: 999;
+    transition: all var(--transition);
+
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+
+    border-left: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+
+    transform: rotate(-45deg);
+  }
+  &.show {
+    &::after {
+      top: 20px;
+      transform: rotate(135deg);
+    }
+  }
+}
+.alertSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  margin-top: 16px;
+
+  span {
+    margin-left: 17px;
+    color: #dadce5;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.buttons {
+  display: flex;
+  position: relative;
+  width: 100%;
+  gap: 24px;
+}
+
+.tooltipOpen {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: -8px;
+  margin-top: 60px;
+}
+
+.closeTooltip {
+  display: none;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltiptext {
+  @include Body2M;
+  background-color: var(--Grey);
+  color: var(--White);
+  text-align: center;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 26px;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent var(--Grey) transparent;
+}
+
+.boxWrapper {
+  height: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  width: 100%;
+  margin-bottom: 24px;
+  h2 {
+    margin-left: 10px;
+    margin-bottom: 12px;
+    @include Headline4D;
+  }
+
+  .box {
+    height: 232px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #393b46;
+    border-radius: 8px;
+    width: 100%;
+  }
+}
+
+.wordPairs {
+  display: flex;
+  flex-direction: row;
+  color: var(--Black);
+  margin: 8px 20px;
+  span {
+    width: 24px;
+    margin: auto 4px;
+  }
+  .wordPair {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-start;
+    h3 {
+      @include Body1D;
+      margin: 0 0 2px;
+      width: auto;
+      text-align: left;
+    }
+    h4 {
+      @include Body3D;
+      text-align: left;
+      margin: 0;
+      width: auto;
+      color: var(--L_Grey);
+    }
+  }
+}
+.popoverLink  {
+  --background: var(--L_Blue);
+  border: none;
+  ion-content {
+    @include ButtonLinkMedium;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --color: var(--D_Blue);
+    --background: var(--L_Blue);
+    border: none;
+  }
+}
+
+@include md {
+  .innerWrapper {
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    gap: 24px;
+    padding: 32px 24px 24px 24px;
+    @include Headline3M;
+    h2 {
+      @include Headline3M;
+    }
+
+  }
+  .boxWrapper {
+    display: none;
+  }
+  .copyLink {
+    display: none;
+  }
+  .modalDescription {
+    display: block;
+    margin: 28px auto 48px;
+    @include Body2M;
+  }
+  .buttons {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    margin: 0;
+    padding: 24px;
+  }
+  .updateField {
+    flex-direction: column;
+    width: 100%;
+  }
+  .uploadCoverContainer {
+    width: 100%;
+  }
+}

@@ -1,0 +1,29 @@
+@import '../../styles/mixins.scss';
+
+.headerWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.emptyLesson {
+  display: flex;
+  flex-direction: column;
+  max-width: 458px;
+}
+.linkPublic{
+  color: var( --M_Blue);
+  text-decoration: underline;
+  cursor: pointer;
+}
+@include md {
+  .auth {
+    gap: 8px;
+  }
+
+  .accordion {
+    display: none;
+  }
+}
+.sortingStyles {
+  margin-top: -64px;
+}

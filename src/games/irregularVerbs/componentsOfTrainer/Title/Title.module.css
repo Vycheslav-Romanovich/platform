@@ -1,0 +1,19 @@
+.title{
+    font-family: 'Inter',sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    color: #131C32;
+    margin-top: 56px;
+
+}
+@media (max-width: 456px) {
+    .title {
+        margin-top: 40px;
+        font-size: 20px;
+        line-height: 28px;
+    }
+}

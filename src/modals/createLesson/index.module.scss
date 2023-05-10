@@ -1,0 +1,247 @@
+@import "../../styles/mixins.scss";
+
+.modal {
+  width: 808px !important;
+  padding: 0;
+  z-index: 1050;
+}
+
+.innerWrapper {
+  position: relative;
+  z-index: 1100;
+  width: 100%;
+  padding: 48px 104px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--White);
+  border-radius: 20px;
+
+  h2 {
+    @include Headline3D;
+    color: var(--Black);
+  }
+}
+
+.modalDescription {
+  display: none;
+}
+
+.copyLink {
+  position: relative;
+  margin-top: 24px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+}
+
+.noTopInField div:first-child {
+  top: 0;
+  height: 100%;
+}
+
+.modalButton {
+  position: absolute;
+  top: -52px;
+  right: 20px;
+  width: 200px;
+  height: 44px;
+  font-size: 14px;
+
+  &::after {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    pointer-events: none;
+    z-index: 999;
+    transition: all var(--transition);
+
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+
+    border-left: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+
+    transform: rotate(-45deg);
+  }
+
+  &.show {
+    &::after {
+      top: 20px;
+      transform: rotate(135deg);
+    }
+  }
+}
+
+.alertSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  margin-top: 16px;
+
+  span {
+    margin-left: 17px;
+    color: #dadce5;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.buttons {
+  position: relative;
+  width: 100%;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.tooltipOpen {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  right: 8px;
+  margin-top: 60px;
+}
+
+.closeTooltip {
+  display: none;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltiptext {
+  @include Body2M;
+  background-color: var(--Grey);
+  color: var(--White);
+  text-align: center;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 26px;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent var(--Grey) transparent;
+}
+
+.boxWrapper {
+  height: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  width: 100%;
+  margin-bottom: 24px;
+
+  h2 {
+    margin-left: 10px;
+    margin-bottom: 12px;
+    @include Headline4D;
+  }
+
+  .box {
+    height: 232px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #393b46;
+    border-radius: 8px;
+    width: 100%;
+  }
+}
+
+.wordPairs {
+  display: flex;
+  flex-direction: row;
+  color: var(--Black);
+  margin: 8px 20px;
+
+  span {
+    width: 24px;
+    margin: auto 4px;
+  }
+
+  .wordPair {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-start;
+
+    h3 {
+      @include Body1D;
+      margin: 0 0 2px;
+      width: auto;
+      text-align: left;
+    }
+
+    h4 {
+      @include Body3D;
+      text-align: left;
+      margin: 0;
+      width: auto;
+      color: var(--L_Grey);
+    }
+  }
+}
+
+.popoverLink {
+  --background: var(--L_Blue);
+  border: none;
+}
+
+@include md {
+  .modal {
+    max-width: 312px !important;
+  }
+  .innerWrapper {
+    padding: 28px 34px;
+    @include Headline3M;
+
+    h2 {
+      @include Headline3M;
+    }
+  }
+  .boxWrapper {
+    display: none;
+  }
+  .copyLink {
+    display: flex;
+    gap: 24px;
+    height: auto;
+  }
+  .modalDescription {
+    display: block;
+    margin: 16px auto 0;
+    @include Body2M;
+  }
+  .buttons {
+    margin: 0;
+    width: fit-content;
+  }
+  .tooltipOpen {
+    top: 39px;
+    right: 0px;
+    margin-top: 0;
+  }
+  .tooltiptext {
+    padding: 4px 8px;
+  }
+  .tooltiptext::after {
+    bottom: 23px;
+  }
+}

@@ -1,0 +1,55 @@
+@import '~/styles/mixins';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Silver);
+  box-shadow: var(--Shadow2px);
+  border-radius: 14px;
+  width: 100%;
+  max-height: 322px;
+  cursor: pointer;
+  
+  @keyframes fadeIn {
+    0% {
+      background-color: var(--Sky);
+    }
+    50% {
+      background-color: var(--Sky);
+    }
+    75% {
+      background-color: var(--Sky);
+    }
+    100% {
+      background-color: var(--Silver);
+    }
+  }
+
+  .img {
+    border: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    flex-grow: 1;
+    border-radius: 8px 8px 0px 0px;
+    cursor: pointer;
+  }
+
+  .titleWrapper {
+    padding: 0 16px 16px;
+  }
+
+  .title {
+    width: 90%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+  }
+
+  .description {
+    @include Body2D;
+    color: var(--Grey);
+  }
+}
+

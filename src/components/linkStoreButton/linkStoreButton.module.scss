@@ -1,0 +1,32 @@
+@import '../../styles/mixins.scss';
+
+.appStoreWrapper {
+  @include sm {
+    display: block;
+  }
+  display: none;
+  filter: drop-shadow(2px 2px 20px rgba(0,0,0,.25));
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 45vh;
+    z-index: 10;
+}
+
+.link {
+  align-items: center;
+  background-color: var(--White);
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: flex;
+  height: 64px;
+  justify-content: flex-end;
+  left: -20px;
+  padding: 6px;
+  position: relative;
+  width: 64px;
+  svg {
+    width: 36px;
+    height: 36px;
+  }
+}

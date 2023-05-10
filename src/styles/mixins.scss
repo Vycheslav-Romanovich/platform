@@ -1,0 +1,285 @@
+@mixin Headline1D {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 76px;
+}
+
+@mixin Headline1M {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+}
+
+@mixin Headline2D {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+@mixin Headline2M {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+@mixin Headline3D {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+}
+
+@mixin Headline3M {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@mixin Headline4D {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+@mixin Headline4M {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@mixin HeadLine5M {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+@mixin HeadLine5D {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin Headline6D {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+@mixin Body0D {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+@mixin Body1D {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin Body1M {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin Body2D {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin Body2M {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin Body3D {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin Body3M {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@mixin Body4D {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+}
+
+@mixin Rubik {
+  font-family: var(--Rubik);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+@mixin ButtonLinkNormal {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: none;
+  letter-spacing: 0 !important;
+  --box-shadow: none !important;
+}
+
+@mixin ButtonLinkMedium {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@mixin ButtonLinkSmall {
+  letter-spacing: 0 !important;
+  --box-shadow: none !important;
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+@mixin FieldsTextSmall {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 15px;
+}
+@mixin FieldsText1 {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin FieldsText2 {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 26px;
+}
+
+@mixin FlexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin Button {
+  height: 40px;
+  font-size: 18px;
+  text-transform: none;
+  letter-spacing: 0 !important;
+}
+
+@mixin ButtonMobileMedia {
+  @include Button;
+  height: 48px;
+  @include ButtonLinkMedium;
+  @media (max-width: 715px) {
+    height: 44px;
+    @include ButtonLinkSmall;
+  }
+}
+
+@mixin PrimaryBtn {
+  @include Button;
+
+  @media (max-width: 715px) {
+    height: 48px;
+    @include ButtonLinkSmall;
+  }
+}
+
+@mixin IonInput {
+  height: 56px;
+  background: var(--L_Blue);
+  border-radius: 8px;
+}
+
+@mixin General {
+  display: flex;
+  justify-content: space-between;
+}
+
+$xs: 440px;
+$sm: 639px;
+$md: 768px;
+$lg: 1023px;
+$xl: 1279px;
+
+ @mixin xs {
+   @media (max-width: $xs) {
+     @content;
+   }
+ }
+ @mixin sm {
+   @media (max-width: $sm) {
+     @content;
+   }
+ }
+ @mixin md {
+   @media (max-width: $md) {
+     @content;
+   }
+ }
+ @mixin lg {
+   @media (max-width: $lg) {
+     @content;
+   }
+ }
+ @mixin xl {
+   @media (min-width: $xl) {
+     @content;
+   }
+ }

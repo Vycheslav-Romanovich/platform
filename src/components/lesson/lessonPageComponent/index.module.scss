@@ -1,0 +1,103 @@
+@import '../../../styles/mixins.scss';
+
+.modalText {
+  @include Headline3M;
+  color: var(--Black);
+  margin-bottom: 15px;
+}
+
+.imgLesson {
+  width: 200px;
+  height: 92px;
+}
+
+.modalTextChoose {
+  @include Headline3M;
+  color: var(--Black);
+  margin-top: 50px;
+  margin-bottom: 19px;
+
+  @include sm {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+}
+
+.imgWrapper {
+  display: grid;
+  grid-gap: 18px;
+  gap: 18px;
+  width: 100%;
+  grid-template-columns: repeat(3, minmax(0, 600px));
+  margin-bottom: 59px;
+
+  @include md {
+    grid-template-columns: repeat(2, minmax(0, 600px));
+    justify-items: center;
+  }
+
+  @include sm {
+    grid-template-columns: repeat(2, minmax(0, 110px));
+    justify-items: center;
+    justify-content: center;
+  }
+}
+
+.coverChoosed {
+  cursor: pointer;
+  position: relative;
+  width: 200px;
+  height: 92px;
+
+  @include sm {
+    width: 110px;
+    height: 45px;
+  }
+}
+
+.coverChoosed::after {
+  position: relative;
+  display: block;
+  content: "";
+  width: 208px;
+  height: 101px;
+  border: 2px solid var(--Blue);
+  border-radius: 8px;
+  right: 4px;
+  bottom: 99px;
+
+  @include sm {
+    width: 119px;
+    height: 60px;
+    bottom: 79px;
+  }
+}
+
+.coverImages {
+  cursor: pointer;
+  position: relative;
+  width: 200px;
+  height: 92px;
+
+  @include sm {
+    width: 110px;
+    height: 45px;
+  }
+}
+
+.blockButtonBottom {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.saveButtonCover {
+  width: 101px;
+  height: 48px;
+  background-color: var(--M_Blue)!important;
+  text-transform: capitalize!important;
+  font-family: var(--default-font)!important;
+  font-style: normal!important;
+  font-weight: 400!important;
+  font-size: 16px!important;
+  line-height: 20px!important;
+}

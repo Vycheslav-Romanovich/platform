@@ -1,0 +1,178 @@
+@import '~/styles/mixins';
+
+.progressContainer {
+  @include FlexCenter;
+  flex-direction: column;
+  position: relative;
+  padding: 70px 0;
+  z-index: 1;
+
+  @include lg {
+    padding: 40px 20px;
+  }
+
+  @include xs {
+    padding-top: 32px;
+  }
+
+  .gradientBg {
+    top: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background: var(--L_Blue);
+    z-index: -1;
+  }
+
+  .descriptionContainer {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+
+    svg {
+      width: 44px;
+      height: 44px;
+
+      @include xs {
+        display: none;
+      }
+    }
+  }
+
+  .progress{
+    position: relative;
+    @include FlexCenter;
+    width: 100%;
+    margin-top: 72px;
+    @include lg {
+      margin-top: 48px;
+      flex-direction: column;
+    }
+    @include xs {
+      padding: 0 24px;
+    }
+  }
+}
+
+.progressPic {
+  position: relative;
+}
+
+.decorationWrapperTop {
+  position: absolute;
+  top: 0;
+  left: -6%;
+
+  @include lg {
+    top: -60px;
+    left: 15%;
+  }
+
+  @include xs {
+    display: none;
+  }
+  div {
+    position: absolute;
+    @include lg {
+      top: 10px;
+      right: 30px;
+    }
+  }
+}
+
+
+.decorationWrapperBottom {
+  position: absolute;
+  bottom: 1%;
+  right: -9%;
+
+  @include lg {
+    bottom: 3%;
+    right: 5%;
+
+    .wave {
+      left: 10%;
+    }
+
+    .star {
+      display: none;
+    }
+  }
+
+  @include xs {
+    display: none;
+  }
+  div {
+    position: absolute;
+    @include lg {
+      top: 10px;
+      right: 30px;
+    }
+  }
+}
+
+.tipsWrapper {
+  @include lg {
+    margin-top: 18px;
+    @include FlexCenter;
+    justify-content: space-around;
+    gap: 30px;
+  }
+  @include xs {
+    flex-direction: column;
+  }
+}
+
+.progressTipRight {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: -1%;
+  width: 25%;
+  padding: 16px;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--Shadow8px);
+  backdrop-filter: blur(15px);
+  border-radius: 8px;
+
+  @include lg {
+    position: static;
+    width: 100%;
+  }
+}
+.progressTipLeft {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 90px;
+  left: -1%;
+  width: 25%;
+  padding: 16px;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--Shadow8px);
+  backdrop-filter: blur(15px);
+  border-radius: 8px;
+
+  @include lg {
+    position: static;
+    width: 100%;
+  }
+}
+
+.descriptionContainer {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+
+  svg {
+    width: 44px;
+    height: 44px;
+
+    @include xs {
+      display: none;
+    }
+  }
+}

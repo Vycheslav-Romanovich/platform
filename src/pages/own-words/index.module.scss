@@ -1,0 +1,315 @@
+@import '../../styles/mixins.scss';
+
+.lesson {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-self: center;
+  height: 100%;
+
+  .breadCrumbs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+
+    .active {
+      @include Headline4D;
+      color: var(--Blue);
+      margin-right: 18px;
+    }
+
+    svg {
+      width: 10px;
+      height: 20px;
+      margin-right: 18px;
+    }
+
+    .create {
+      @include Headline4D;
+      color: var(--L_Grey);
+    }
+  }
+
+  .required {
+    @include Body3M;
+    margin-bottom: 16px;
+    color: var(--Grey);
+  }
+
+  h2 {
+    @include Headline2M;
+    margin-bottom: 20px;
+    color: var(--Black);
+  }
+
+  h3 {
+    @include Body2D;
+    margin: 32px 0 40px;
+    color: var(--D_Grey);
+    max-width: 500px;
+  }
+
+  .stickyElements {
+    width: 100%;
+  }
+
+  .ionInputContainer {
+    max-width: 392px;
+    margin-bottom: 42px;
+
+    @include sm {
+      margin-bottom: 22px;
+    }
+  }
+}
+
+.checkImg {
+  display: flex;
+  align-items: center;
+  margin-bottom: 42px;
+
+  @include sm {
+    margin-bottom: 22px;
+  }
+
+  .defaultCover {
+    border-radius: 8px;
+    margin-right: 27px;
+    cursor: pointer;
+
+    svg {
+      width: 200px;
+      height: 92px;
+    }
+  }
+
+  .text {
+    @include Body1D;
+    color: var(--Grey);
+    margin-bottom: 8px;
+  }
+
+  .button {
+    @include Headline4D;
+    color: var(--Blue);
+    text-transform: capitalize;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+
+.imgLesson {
+  width: 200px;
+  height: 92px;
+}
+
+.errorMb {
+  margin-bottom: 24px;
+}
+
+.loader {
+  color: var(--White) !important;
+  width: 24px !important;
+  height: 24px !important;
+  margin-left: 8px;
+}
+
+.createButtonTop {
+  position: absolute !important;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  padding: 16px 32px !important;
+  border-radius: 8px !important;
+  background-color: var(--M_Blue) !important;
+  text-transform: capitalize !important;
+  font-family: var(--default-font) !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 18px !important;
+  line-height: 24px !important;
+}
+.lessonCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin: 0 0 48px;
+}
+
+.blockButtonBottom {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.createButtonBottom {
+  display: block;
+}
+
+.saveButtonCover {
+  width: 101px;
+  height: 48px;
+  background-color: var(--M_Blue) !important;
+  text-transform: capitalize !important;
+  font-family: var(--default-font) !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
+}
+
+.selectWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+
+  .created {
+    @include Headline2M;
+    color: var(--Black);
+    margin-bottom: 8px;
+  }
+
+  .enter {
+    @include Body2D;
+    color: var(--Black);
+  }
+
+  @include sm {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.selectTextMobile {
+  @include sm {
+    margin-bottom: 35px;
+  }
+}
+
+.addOutline {
+  height: 22px;
+  width: 22px;
+  margin-right: 10px;
+}
+
+.createCard {
+  color: var(--Grey_Blue);
+  border: 2px dashed var(--Grey_Blue);
+  border-radius: 14px;
+  min-height: 136px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  @include Headline4D;
+
+  &:hover {
+    border: 2px dashed var(--Blue);
+    color: var(--Blue);
+  }
+
+  svg {
+    margin-right: 9px;
+  }
+  svg path {
+    stroke: currentColor;
+  }
+
+  p {
+    @include Headline4D;
+    color: currentColor;
+  }
+}
+
+.copyButton {
+  position: absolute;
+  top: 23px;
+  right: 18px;
+  width: 200px;
+}
+
+.alertSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+
+  h4 {
+    color: #dadce5;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.buttonsTop {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.lessonWrapper {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 196px;
+  width: 100%;
+}
+@media (max-width: 960px) {
+  .lessonCard {
+    grid-template-columns: repeat(1, minmax(0, 600px));
+    max-width: 600px;
+    margin: auto;
+  }
+  .stickyContent {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 24px;
+  }
+  .createButtonTop {
+    display: none !important;
+  }
+  .createButtonBottom {
+    position: absolute !important;
+    display: flex !important;
+    flex-direction: row;
+    bottom: -75px;
+    right: 0;
+  }
+  .ionInputContainer {
+    max-width: 600px !important;
+  }
+  .lessonWrapper {
+    padding-bottom: 0;
+    margin-bottom: 200px;
+  }
+  .createCard {
+    min-height: 64px;
+    border-radius: 8px;
+  }
+  .lesson {
+    h2 {
+      @include Headline2D;
+      color: var(--Black);
+
+      @include sm {
+        @include Headline4D;
+      }
+    }
+    h3 {
+      @include Body2D;
+      margin: 16px 0;
+      width: 100%;
+      color: var(--D_Grey);
+    }
+  }
+}

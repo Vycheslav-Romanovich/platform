@@ -1,0 +1,147 @@
+@import "src/styles/mixins";
+
+$bg: var(--Silver);
+.wrapper {
+  position: absolute;
+  z-index: 9999;
+  user-select: none;
+  filter: drop-shadow(0px 4px 8px rgba(92, 119, 242, 0.3));
+  transition: all var(--transition);
+  transform: translateX(-50%) translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &.right {
+    transform: translateX(-80%) translateY(-100%);
+    .triangle {
+      margin-left: 80%;
+    }
+  }
+
+  &.left {
+    transform: translateX(-20%) translateY(-100%);
+    .triangle {
+      margin-left: 20%;
+    }
+  }
+}
+
+.context {
+  z-index: 1004;
+  color: var(--gray3);
+  background: $bg;
+  border-radius: 8px;
+  position: relative;
+  min-height: 38px;
+  min-width: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    flex-direction: column;
+  }
+
+  &_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .translate {
+      @include Body2D;
+      color: var(--Black);
+    }
+
+    .orig {
+      @include Body3D;
+      color: var(--L_Grey);
+    }
+
+    .idiom {
+      font-style: italic;
+      color: var(--aquamarine);
+    }
+  }
+
+  &_article {
+    padding: 0 15px;
+    font-size: 13px;
+  }
+
+  .divider {
+    width: auto;
+    margin: 10px;
+    height: 0.5px;
+    background-color: var(--Black);
+  }
+}
+
+.triangle {
+  position: relative;
+  $size: 26px;
+  width: 15px;
+  height: $size;
+  border-radius: 0 0 2px 0;
+  background-color: $bg;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  margin-left: 52%;
+  margin-top: -4px;
+}
+
+.errorField {
+  position: absolute;
+  color: var(--pink);
+  bottom: 100%;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  white-space: nowrap;
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: var(--transition);
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes fade-in-bl {
+  0% {
+    transform: translateX(-10px) translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .popupField {
+    min-width: max-content;
+  }
+}

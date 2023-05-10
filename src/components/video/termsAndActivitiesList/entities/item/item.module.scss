@@ -1,0 +1,22 @@
+@import '~/styles/mixins.scss';
+
+.wordPair {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 6px;
+  cursor: pointer;
+}
+.activityName {
+  width: 90%;
+  text-align: left;
+}
+.trashIcon {
+  align-self: center;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  color: var(--L_Grey);
+}

@@ -1,0 +1,92 @@
+@import 'src/styles/mixins';
+
+.intGameContainer {
+  position: absolute;
+  z-index: 141;
+  top: -2px;
+  left: -8px;
+  width: 102%;
+  min-height: 100%;
+  display: flex;
+  background: var(--Silver);
+  box-shadow: 0 8px 16px rgba(92, 119, 242, 0.15);
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  border-radius: 16px;
+  padding: 40px;
+  margin-bottom: 20px;
+}
+.questionWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  gap: 32px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--White);
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 8px;
+    box-shadow: var(--Shadow8px);
+    top: 0;
+    left: 0;
+  }
+}
+
+.intGameContainerFullScreen {
+  height: 100%;
+  overflow: auto;
+}
+
+.addQuestionButton {
+  width: 100%;
+  border: 2px dashed var(--Grey_Blue);
+  background: var(--White);
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.addTrueFalseButton {
+  width: 100%;
+  background: var(--Sky);
+  margin-top: 24px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.buttonBlock {
+  display: flex;
+  gap: 24px;
+  .button {
+    height: 48px;
+  }
+}
+
+.displayNone {
+  display: none;
+}
+
+@include sm {
+  .questionWrapper {
+    padding: 12px 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 16px;
+    width: auto;
+    margin-bottom: 24px;
+  }
+  .addQuestionButton {
+    width: auto;
+    margin-bottom: 24px;
+  }
+}

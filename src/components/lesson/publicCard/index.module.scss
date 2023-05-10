@@ -1,0 +1,121 @@
+@import '~/styles/mixins';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: var(--Silver);
+  box-shadow: var(--Shadow2px);
+  border-radius: 14px;
+  width: 100%;
+  max-height: 322px;
+  cursor: pointer;
+  
+  @keyframes fadeIn {
+    0% {
+      background-color: var(--Sky);
+    }
+    50% {
+      background-color: var(--Sky);
+    }
+    75% {
+      background-color: var(--Sky);
+    }
+    100% {
+      background-color: var(--Silver);
+    }
+  }
+  
+
+  &.highlight {
+    background-color: var(--Sky);
+    animation-name: fadeIn;
+    animation-duration: 1.2s;
+  }
+
+  .img {
+    border: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    flex-grow: 1;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .titleWrapper {
+    width: 90%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title {
+    @include Headline4D;
+    color: var(--Black);
+    margin-top: 16px;
+    margin-bottom: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .levelAndRating {
+    @include Body1M;
+    color: var(--Grey);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .starsRating{
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  .rating{
+    @include Body2M;
+    margin-left: 8px;
+  }
+
+  .userWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .numberWords {
+    @include Body1M;
+    color: var(--Grey);
+  }
+
+  .nameWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 75%;
+  }
+
+  .avatarUser {
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+
+  .nameUser {
+    @include Body1M;
+    color: var(--Grey);
+    margin-left: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  color: var(--D_Gray);
+}

@@ -1,0 +1,81 @@
+@import '~/styles/mixins.scss';
+
+.active {
+  & .titleNav {
+    position: relative;
+    color: var(--M_Blue);
+  }
+}
+
+.boxWrapper {
+  margin-top: 16px;
+}
+
+.header {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.closeBtn {
+  align-self: flex-end;
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+
+.logo {
+  margin-left: 24px;
+}
+
+.tab {
+  padding-left: 24px;
+  cursor: pointer;
+}
+
+.accordionTab {
+  padding-left: 36px;
+  cursor: pointer;
+  @include Body1M;
+}
+
+.rootAccordion {
+  box-shadow: none;
+  margin: 0 !important;
+  &::before {
+    content: none;
+  }
+}
+
+.rootAccordionSummary {
+  min-height: 48px !important;
+  padding-left: 24px;
+}
+
+.contentAccordionSummary {
+  margin: 12px 0 !important;
+  align-items: center;
+}
+
+.rootAccordionSummaryLang{
+  min-height: 48px !important;
+  padding-left: 24px;
+  justify-content: flex-start;
+}
+
+.contentAccordionSummaryLang{
+  margin: 12px 0 !important;
+  align-items: center;
+  flex-grow: 0;
+  -webkit-flex-grow: 0;
+}
+
+.rootAccordionDetails {
+  padding: 0;
+}
+
+.premBtn {
+  justify-content: flex-start;
+  margin-left: 20px;
+  margin-top: 20px;
+}

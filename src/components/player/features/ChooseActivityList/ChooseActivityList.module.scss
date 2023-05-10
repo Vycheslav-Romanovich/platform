@@ -1,0 +1,13 @@
+@import 'src/styles/mixins';
+
+.activityContainer {
+  display: flex;
+  gap: 30px;
+}
+
+@include sm {
+  .activityContainer {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}

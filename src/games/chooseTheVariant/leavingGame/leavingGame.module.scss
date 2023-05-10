@@ -1,0 +1,33 @@
+@import '~/styles/mixins.scss';
+
+.wrapper {
+  @include FlexCenter;
+  flex-direction: column;
+  width: 100%;
+  background: var(--Silver);
+}
+
+.leavingTitle {
+  @include Headline2D;
+  width: 100%;
+  text-align: center;
+  margin-top: 170px;
+  margin-bottom: 64px;
+}
+
+.endingGameButtonText {
+  @include ButtonLinkMedium;
+  text-align: center;
+}
+
+.endingButton {
+  padding: 14px 32px;
+  border: 1px solid var(--M_Blue);
+  border-radius: 8px;
+}
+
+.endingGameButtonsWrapper {
+  @include FlexCenter;
+  gap: 24px;
+}
+

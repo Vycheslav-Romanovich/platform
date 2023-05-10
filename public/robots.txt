@@ -1,0 +1,17 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /change_password
+Disallow: /choose-account-type
+Disallow: /account
+Disallow: /restore-password
+Disallow: /create-video-lesson
+Disallow: /own-words
+Disallow: /teachers
+
+# Host
+Host: https://edu.elang.com/
+
+# Sitemaps
+Sitemap: https://edu.elang.com/sitemap.xml
+Sitemap: https://edu.elang.com/server-sitemap-index.xml

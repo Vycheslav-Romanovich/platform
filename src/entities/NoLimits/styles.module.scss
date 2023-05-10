@@ -1,0 +1,27 @@
+@import '~/styles/mixins.scss';
+
+.cardsWrapper {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, minmax(0, 300px));
+  grid-gap: 24px;
+}
+
+@include md {
+  .cardsWrapper {
+    grid-gap: 16px;
+    grid-template-columns: repeat(2, minmax(0, 300px));
+  }
+}
+
+@include sm {
+  .cardsWrapper {
+    grid-template-columns: repeat(1, minmax(0, 300px));
+  }
+}
+
+@include xs {
+  .cardsWrapper {
+    grid-template-columns: repeat(1, minmax(0, 100%));
+  }
+}

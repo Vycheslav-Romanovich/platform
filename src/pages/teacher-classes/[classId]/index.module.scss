@@ -1,0 +1,161 @@
+@import '../../../styles/mixins';
+
+.titleLesson {
+  word-break: break-word;
+}
+
+.headerWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  position: relative;
+
+  .assignLessonDropDownBox {
+    display: flex;
+    position: relative;
+    gap: 24px;
+    border-radius: 8px;
+  }
+}
+
+.inviteButton {
+  height: 48px;
+  width: 190px;
+}
+
+.signupButtons {
+  position: absolute;
+  @include FlexCenter;
+  top: 110px;
+  gap: 24px;
+}
+
+.pointerPic {
+  position: absolute;
+  top: 8px;
+  right: 156px;
+  width: 60px;
+  height: 60px;
+  transform: rotate(-19.82deg);
+}
+
+.lessonBlockWrapper {
+  position: relative;
+  pointer-events: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    left: 0;
+    top: 0;
+    z-index: 1201;
+  }
+}
+
+.libraryLessons {
+  max-width: 1224px;
+  height: 734px - 76px;
+  overflow-x: hidden;
+  padding: 48px !important;
+}
+
+.logoutIcon {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  background: var(--L_Blue);
+  border-radius: 8px;
+  @include FlexCenter;
+}
+
+.libraryButton {
+  position: absolute;
+  top: 550px;
+  width: 100%;
+  height: 76px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: white;
+  z-index: 10000;
+}
+
+.libraryTitle {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.img {
+  border: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background: transparent;
+  flex-grow: 1;
+  border-radius: 8px;
+}
+
+.teacherClassData {
+  @include Body1D;
+  color: var(--Grey);
+}
+
+.classInfo {
+  display: flex;
+  gap: 24px;
+
+  .imgContainer {
+    width: 88px;
+    height: 86px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+}
+
+.emptyLesson {
+  display: flex;
+  flex-direction: column;
+  max-width: 458px;
+}
+
+.linkPublic {
+  color: var(--M_Blue);
+  text-decoration: underline;
+}
+
+.numberOfClasses {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  color: var(--L_Grey);
+  margin: 40px 0 48px;
+
+  & .number {
+    min-width: fit-content;
+  }
+}
+
+@include md {
+  .headerWrapper {
+    flex-flow: column;
+    align-items: flex-start;
+    gap: 16px;
+
+    .assignLessonDropDownBox {
+      align-self: flex-end;
+    }
+  }
+
+  .auth {
+    gap: 8px;
+  }
+}
+
+// .sortingStyles {
+// position: absolute;
+// top: 108px;
+// right: -5px;
+// }

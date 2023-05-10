@@ -1,0 +1,25 @@
+{
+  "name": "Online English Teaching Platform | eLang Platform",
+  "short_name": "eLang",
+  "description": "eLang Platform for English teaching online ✓ Use pre-made exercises and create lessons with vocabulary and grammar templates ➞ word games, videos ✭ Use big video library to make and share exercises with students",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#637cf2",
+  "background_color": "#202128",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/images/logo_192.png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/maskable_icon.png",
+      "sizes": "196x196",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+@import '../../../styles/mixins.scss';
+
+.wordBox {
+  @include FlexCenter;
+  font-weight: 455;
+  font-size: 18px;
+  line-height: 30px;
+  height: 64px;
+  padding-right: 40px;
+  padding-left: 40px;
+  background: var(--White);
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: var(--Shadow2px);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.variantsWrapper {
+  @include FlexCenter;
+  flex-direction: row;
+  column-gap: 18px;
+  flex-wrap: wrap;
+  row-gap: 14px;
+  margin-top: 32px;
+}
+
+.contentWrapper {
+  @extend .wordBox;
+  box-shadow: var(--Shadow6px);
+  border: 1px solid var(--White);
+}
+
+.contentWrapperIncorrect {
+  @extend .wordBox;
+  background: var(--L_Red);
+  border: 1px solid var(--Pink);
+}
+
+.contentWrapperCorrect {
+  @extend .wordBox;
+  border: 1px solid var(--Blue);
+  background: var(--White);
+}
+
+.contentWrapperAlreadyMatched {
+  @extend .wordBox;
+  display: flex;
+  height: 60px;
+  width: 150px;
+  opacity: 0;
+}
+
+.gameTable {
+  @include FlexCenter;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 16px;
+  column-gap: 36px;
+  max-width: 800px;
+  text-align: center;
+  width: 100%;
+}
+
+@include md {
+  .wordBox {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    height: 44px;
+    width: auto;
+  }
+  .contentWrapperAlreadyMatched {
+    @include ButtonLinkNormal;
+    height: 96px;
+    width: 102px;
+  }
+
+  .variantsWrapper {
+    margin-bottom: 38px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .gameTable {
+    row-gap: 3px;
+    column-gap: 3px;
+    height: 100%;
+    justify-content: space-around;
+  }
+}

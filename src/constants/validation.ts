@@ -1,0 +1,18 @@
+export const error = {
+  empty: 'Field cannot be empty',
+  longSix: 'Password must be at least 6 characters long!',
+  longSixteen: 'Password must be less than 16 characters long!',
+  matchNotPassword: 'Passwords do not match',
+  longEighty: 'Name must be less than 80 characters long!',
+  moreThree: 'Name must be more than 2 characters!',
+  lessonError: 'Minimum number of cards 3',
+  lessonCardWord: 'Field cannot be empty',
+  lessonCardTranslateWord: 'Field cannot be empty',
+  old: 'Checked old password',
+  findAccount: "We couldn't find this account.",
+  alreadyExists: 'User with such email already exists!',
+  emailCorrectly: 'Check that you entered your email correctly!',
+  checkPassword: 'Please check your password',
+  checkPrivacy: 'Please check this box if you want to proceed',
+  matchPassword: 'The new password must differ from your previous password',
+};

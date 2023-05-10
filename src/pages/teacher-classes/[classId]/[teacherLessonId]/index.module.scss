@@ -1,0 +1,490 @@
+@import 'src/styles/mixins.scss';
+
+.backNav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.titleBlock {
+  display: flex;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 24px;
+}
+
+.breadcrumbsWrapper {
+  @include FlexCenter;
+  justify-content: flex-start;
+  margin-bottom: 42px;
+  gap: 24px;
+
+  & .teacherLessonBack {
+    width: 34px;
+    height: 44px;
+    cursor: pointer;
+  }
+}
+
+.tooltip {
+  background-color: var(--Grey);
+  box-shadow: var(--Shadow6px);
+  border-radius: 4px;
+  width: 125px;
+  color: var(--White);
+  @include Body2M;
+  text-align: center;
+}
+
+.tooltipArrow {
+  color: var(--Grey);
+}
+
+.editBlockButton {
+  display: flex;
+  align-items: center;
+  position: relative;
+  column-gap: 10px;
+}
+
+.deleteButton {
+  @include FlexCenter;
+}
+
+.popoverLink {
+  border: none;
+}
+
+.customHeaderWrapper {
+  display: none;
+}
+
+.arrowBackOutline {
+  width: 27px;
+  height: 44px;
+}
+
+.modalVideo {
+  transform: translateY(-20px);
+  display: flex;
+  justify-content: center;
+  max-width: 1224px;
+}
+
+.videoWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.lessonStep {
+  width: 35px;
+  height: 35px;
+  @include FlexCenter;
+  color: var(--Blue);
+  background: var(--L_Blue);
+  margin-right: 16px;
+  border-radius: 5px;
+}
+
+.titleWrapper {
+  display: flex;
+  width: 100%;
+  max-width: 710px;
+  column-gap: 8px;
+  word-break: break-word;
+}
+
+.toastOnCopyOpen {
+  display: none;
+}
+
+.closeToastOnCopy {
+  display: none;
+}
+
+.toastOnCopy {
+  position: relative;
+  display: inline-block;
+}
+
+.toastOnCopyText {
+  @include Body2M;
+  color: var(--White);
+}
+
+.avatarBlock {
+  display: flex;
+  margin-top: 8px;
+
+  & .userName {
+    @include FlexCenter;
+    @include Body3D;
+    margin-left: 8px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 56px;
+  padding-left: 15%;
+
+  .blockWrap {
+    flex-wrap: nowrap;
+  }
+}
+
+.blockGames {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 24px;
+  padding-bottom: 150px;
+
+  & .blockBtn {
+    position: relative;
+    width: 100%;
+    max-width: 391px;
+    height: 160px;
+    display: flex;
+    padding: 0;
+    border-radius: 8px;
+    background-color: var(--White);
+    overflow: hidden;
+
+    & .imgWrapper {
+      max-width: 140px;
+    }
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      border: 1px solid var(--Grey_Blue);
+      border-radius: 8px;
+    }
+
+    &:hover::after {
+      border: 1px solid var(--D_Blue);
+    }
+
+    & .exampleGameImg {
+      position: relative;
+      left: 0;
+      width: 140px;
+      height: 100%;
+    }
+  }
+
+  .explanationGame {
+    max-width: 218px;
+    padding: 18px 16px;
+    text-align: start;
+    position: relative;
+
+    & .titleGame {
+      color: var(--Black);
+    }
+
+    & .textGame {
+      margin-top: 6px;
+      color: var(--D_Grey);
+    }
+  }
+}
+
+.signupButtons {
+  position: absolute;
+  @include FlexCenter;
+  top: 110px;
+  gap: 24px;
+}
+
+.tick {
+  position: absolute;
+  bottom: 1px;
+  right: -35px;
+
+  & svg {
+    width: 30px;
+    height: 30px;
+    color: var(--White);
+  }
+}
+
+.tickVideoGame {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  & svg {
+    width: 30px;
+    height: 30px;
+    color: var(--White);
+  }
+}
+
+.pairsBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .subtitleBlock {
+    align-self: start;
+    margin-top: 10px;
+    color: var(--D_Grey);
+    padding-left: 53px;
+  }
+
+  .wordsList {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 32px;
+    gap: 8px;
+
+    .pairBlock {
+      width: 100%;
+      height: 70px;
+      display: flex;
+      color: var(--D_Blue);
+      box-shadow: var(--Shadow2px);
+      border-radius: 8px;
+      background-color: var(--White);
+
+      & .word {
+        @include FlexCenter;
+        @include Headline4D;
+        padding: 0 40px;
+        flex: 1 0 0;
+      }
+
+      & .translate {
+        @include FlexCenter;
+        @include Body1D;
+        position: relative;
+        padding: 0 40px;
+        flex: 1 0 0;
+
+        &::before {
+          content: '';
+          width: auto;
+          height: 70%;
+          position: absolute;
+          left: 0;
+          border: 1px solid var(--Sky);
+        }
+      }
+    }
+  }
+}
+
+.layoutCustomClass {
+  padding-bottom: 24px;
+  height: auto;
+}
+
+.videoPicWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  max-width: 808px;
+  max-height: 456px;
+  margin-top: 30px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 8px;
+
+  .background {
+    background: rgba(19, 28, 50, 0.8);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 8px;
+  }
+
+  .playIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--Silver);
+  }
+
+  & img {
+    max-width: 100%;
+    border: 0;
+    object-fit: cover;
+    flex-basis: 67%;
+    flex-grow: 1;
+    height: 162px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}
+
+.backArrow {
+  margin: 10px 28px 12px;
+  display: flex;
+  color: var(--Grey);
+}
+
+.dialogVideo {
+  display: none;
+}
+
+@include lg {
+  .wrapper {
+    margin-top: 32px;
+  }
+
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+
+    & .breadcrumbsWrapper {
+      @include FlexCenter;
+      margin-bottom: 42px;
+      gap: 24px;
+
+      & .teacherLessonBack {
+        width: 34px;
+        height: 44px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .editBlockButton {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .lessonStep {
+    width: 24px;
+    height: 24px;
+  }
+
+  .pairsBlock .subtitleBlock {
+    padding-left: 42px;
+  }
+
+  .blockGames .blockBtn {
+    height: 140px;
+  }
+
+  .wrapper {
+    padding: 0;
+
+    .pairsBlock {
+      margin: 0;
+    }
+  }
+
+  .wordsList {
+    justify-content: center;
+  }
+
+  .blockGames .explanationGame {
+    padding: 10px 14px;
+  }
+}
+
+@include md {
+  .blockGames {
+    .blockBtn {
+      height: 120px;
+
+      .imgWrapper {
+        max-width: 120px;
+      }
+
+      .exampleGameImg {
+        width: 100%;
+      }
+    }
+  }
+
+  .videoPicWrapper {
+    width: 100%;
+    height: 170px;
+  }
+
+  .toastOnCopyOpen {
+    display: flex;
+    position: absolute;
+    top: 76vh;
+    right: -12px;
+    width: calc(100% + 24px);
+    height: 48px;
+    padding: 16px;
+    background-color: var(--D_Grey);
+    border-radius: 8px;
+    z-index: 10;
+  }
+}
+
+@include xs {
+  .titleWrapper {
+    max-width: 315px;
+  }
+
+  .videoWrapper {
+    height: calc(100% - 32px);
+  }
+
+  .modalVideo {
+    display: none;
+  }
+
+  .dialogVideo {
+    display: block;
+  }
+
+  .customHeaderWrapper {
+    padding: 8px 22px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .wrapper {
+    padding: 0;
+    margin: 32px 0;
+
+    .pairsBlock {
+      margin: 0;
+    }
+  }
+}
+
+.showAllWordsWrap {
+  width: 100%;
+  display: flex;
+}
+
+.showAllWords {
+  flex-basis: 70%;
+  color: var(--Blue);
+  cursor: pointer;
+  margin-top: 32px;
+  text-align: center;
+}
+
+@media (max-width: 639px) {
+  .showAllWords {
+    flex-basis: 100%;
+  }
+}
